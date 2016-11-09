@@ -1,3 +1,8 @@
+.DS_Store
+updaters/
+i-9-with-sig.pdf
+i-9.pdf.json
+
 target/
 pom.xml.tag
 pom.xml.releaseBackup

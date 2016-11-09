@@ -1,0 +1,31 @@
+{
+  "name": "ack-pdfbox",
+  "version": "1.0.0",
+  "description": "Java code for specific pdf manipulations",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "fill": "java -jar ackpdfbox/target/ackpdfbox-1.0-SNAPSHOT-jar-with-dependencies.jar fill test/i-9.pdf test/i-9-with-sig.pdf.json test/i-9-with-sig.pdf",
+    "read": "java -jar ackpdfbox/target/ackpdfbox-1.0-SNAPSHOT-jar-with-dependencies.jar read test/i-9.pdf test/i-9.pdf.json",
+    "read:dist": "java -jar dist/ackpdfbox-1.0-SNAPSHOT-jar-with-dependencies.jar read test/i-9.pdf test/i-9.pdf.json",
+    "fill:dist": "java -jar dist/ackpdfbox-1.0-SNAPSHOT-jar-with-dependencies.jar fill test/i-9.pdf test/i-9-with-sig.pdf.json test/i-9-with-sig.pdf"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AckerApple/ack-pdfbox.git"
+  },
+  "keywords": [
+    "pdfbox",
+    "pdf",
+    "fill-form",
+    "acroform"
+  ],
+  "author": "Acker Apple",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/AckerApple/ack-pdfbox/issues"
+  },
+  "homepage": "https://github.com/AckerApple/ack-pdfbox#readme"
+}
