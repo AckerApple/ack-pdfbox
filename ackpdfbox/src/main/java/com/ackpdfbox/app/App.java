@@ -6,6 +6,13 @@ import com.ackpdfbox.app.ImageAdder;
 import com.ackpdfbox.app.FieldReader;
 import com.ackpdfbox.app.FieldFiller;
 
+import com.ackpdfbox.app.Decrypt;
+import com.ackpdfbox.app.Encrypt;
+import org.apache.pdfbox.util.Version;
+
+import java.security.Security;
+import org.bouncycastle.jce.provider.BouncyCastleProvider;
+
 public class App{
   /**
    * This will read a PDF file and print out the form elements. <br>
@@ -19,7 +26,11 @@ public class App{
     if (args.length<1){
       usage();
     }else{
-      switch(args[0]){
+      String command = args[0];
+      String[] arguments = new String[args.length - 1];
+      System.arraycopy(args, 1, arguments, 0, arguments.length);
+
+      switch( command.toLowerCase() ){
         case "read":
           FieldReader fieldReader = new FieldReader();
           fieldReader.loadPdfByPath( args[1] );
@@ -53,21 +64,57 @@ public class App{
             imageAdder.save();
           }
           break;
+        
+        case "encrypt":
+          addBouncyCastle();
+          try{
+            com.ackpdfbox.app.Encrypt.main(arguments);
+          }catch(Exception e){
+            e.printStackTrace();
+          }
+          break;
+        
+        case "decrypt":
+          addBouncyCastle();
+          try{
+            com.ackpdfbox.app.Decrypt.main(arguments);
+          }catch(Exception e){
+            System.out.println(arguments[0]);
+            e.printStackTrace();
+          }
+          break;
+
+        case "-version":
+          String version = org.apache.pdfbox.util.Version.getVersion();
+          if (version != null){
+              System.out.println("PDFBox version: \""+version+"\"");
+          }else{
+            System.out.println("unknown");
+          }
+          break;
 
         default:usage();
       }
     }
   }
 
+  public static void addBouncyCastle(){
+    try{
+      Security.addProvider(new BouncyCastleProvider());
+    }catch(Exception e){
+      //System.err.println(e);
+    }
+  }
+
   private static void usage(){
-    System.err.println("usage: FieldManager.jar <read|fill> <pdf-path>");
+    System.err.println("usage: <read|fill|add-image|encrypt|decrypt|-version>");
   }
 
   private static void fillUsage(){
-    System.err.println("usage: FieldManager.jar fill <pdf-path> <json-path> <out-path>");
+    System.err.println("usage: fill <pdf-path> <json-path> <out-path>");
   }
 
   private static void addImageUsage(){
-    System.err.println("usage: FieldManager.jar add-image <pdf-path> <image-path> <page> <x> <y> <out-path>");
+    System.err.println("usage: add-image <pdf-path> <image-path> <page> <x> <y> <out-path>");
   }
 }
