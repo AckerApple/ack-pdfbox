@@ -83,6 +83,15 @@ public class App{
             e.printStackTrace();
           }
           break;
+        
+        case "pdftoimage":
+          try{
+            com.ackpdfbox.app.PDFToImage.main(arguments);
+          }catch(Exception e){
+            System.out.println(arguments[0]);
+            e.printStackTrace();
+          }
+          break;
 
         case "-version":
           String version = org.apache.pdfbox.util.Version.getVersion();

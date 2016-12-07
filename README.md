@@ -1,11 +1,14 @@
 # ack-pdfbox
 Java code for specific pdf manipulations
 
+> This package is Java code and not Node code. This Java code has been put on NPM for easy inclusion in other NPM packages such as [pdfbox-cli-wrap](https://www.npmjs.com/package/pdfbox-cli-wrap)
+
 ### Table of Contents
 
 - [Purpose](#purpose)
 - [CLI Test Commands](#cli-test-commands)
     - [PDFBox Version](#pdfbox-version)
+    - [PDFToImage Test](#pdftoimage)
     - [Read Acroform Output Json File](#read-acroform-output-json-file)
     - [Fill Acroform From Json File](#fill-acroform-from-json-file)
 - [Sample Code](sample-code)
@@ -14,9 +17,11 @@ Java code for specific pdf manipulations
 - [API](api)
     - [read](#read)
     - [fill](#fill)
+    - [PDFToImage](#pdftoimage)
     - [add-image](#add-image)
     - [Encrypt](#encrypt)
     - [Decrypt](#decrypt)
+- [Resources](#resources)
 
 ## Purpose
 To have a uniform and standardized method for populating PDF Acroforms. A JSON file is produced when reading a PDF Acroform and that same JSON file can be used to turn around and populate the source PDF.
@@ -28,6 +33,12 @@ Open ack-pdfbox in a terminal command prompt and then run the following commands
 ```
 java -jar dist/ackpdfbox-1.0-SNAPSHOT-jar-with-dependencies.jar -version
 ```
+
+### PDFToImage Test
+```
+java -jar dist/ackpdfbox-1.0-SNAPSHOT-jar-with-dependencies.jar pdftoimage -endPage 1
+```
+
 
 ### Read Acroform Output Json File
 ```
@@ -166,6 +177,14 @@ Fill Acroform fields from a PDF
 - **jsonPath** - The json file to fill pdf with
 - **outPath** - The file to save the decrypted document to. If left blank then it will be the same as the input file || options
 
+### PDFToImage
+- **password** - The password to the PDF document.
+- **imageType**=jpg - The image type to write to. Currently only jpg or png.
+- **outputPrefix** - Name of PDF document  The prefix to the image file.
+- **startPage**=1 - The first page to convert, one based.
+- **endPage** - The last page to convert, one based.
+- **nonSeq** - false Use the new non sequential parser.
+
 ### add-image
 - **pdfPath** - The PDF file to encrypt
 - **outPath** - The file to save the decrypted document to. If left blank then it will be the same as the input file || options
@@ -197,3 +216,9 @@ Fill Acroform fields from a PDF
     - **password**: Password to the PDF or certificate in keystore.
     - **keyStore**: Path to keystore that holds certificate to decrypt the document (typically a .p12 file). This is only required if the document is encrypted with a certificate, otherwise only the password is required.
     - **alias**:    The alias to the certificate in the keystore.
+
+## Resources
+
+- This Java code is bundled using [Maven](https://maven.apache.org/)
+- [PDFBox](https://pdfbox.apache.org/)
+- Cryptography is provided by [BouncyCastle](http://www.bouncycastle.org/)
