@@ -10,6 +10,7 @@
     "fill": "java -jar ackpdfbox/target/ackpdfbox-1.0-SNAPSHOT-jar-with-dependencies.jar fill test/i-9.pdf test/i-9-with-sig.pdf.json test/i-9-with-sig.pdf",
     "read": "java -jar ackpdfbox/target/ackpdfbox-1.0-SNAPSHOT-jar-with-dependencies.jar read test/i-9.pdf test/i-9.pdf.json",
     "toimg": "java -jar ackpdfbox/target/ackpdfbox-1.0-SNAPSHOT-jar-with-dependencies.jar pdftoimage test/i-9.pdf -endPage 1",
+    "toimg:dist": "java -jar dist/ackpdfbox-1.0-SNAPSHOT-jar-with-dependencies.jar pdftoimage test/i-9.pdf -endPage 1",
     "read:dist": "java -jar dist/ackpdfbox-1.0-SNAPSHOT-jar-with-dependencies.jar read test/i-9.pdf test/i-9.pdf.json",
     "fill:dist": "java -jar dist/ackpdfbox-1.0-SNAPSHOT-jar-with-dependencies.jar fill test/i-9.pdf test/i-9-with-sig.pdf.json test/i-9-with-sig.pdf"
   },

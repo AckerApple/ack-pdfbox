@@ -116,7 +116,7 @@ public class App{
   }
 
   private static void usage(){
-    System.err.println("usage: <read|fill|add-image|encrypt|decrypt|-version>");
+    System.err.println("usage: <read|fill|pdftoimage|add-image|encrypt|decrypt|-version>");
   }
 
   private static void fillUsage(){
