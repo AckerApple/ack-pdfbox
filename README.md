@@ -15,12 +15,12 @@ Java code for specific pdf manipulations
     - [Sample Read Acroform Json File Result](#sample-read-acroform-json-file-result)
     - [Generate Certificates and KeyStore](#generate-certificates-and-keystore)
 - [API](api)
-    - [read](#read)
-    - [fill](#fill)
     - [PDFToImage](#pdftoimage)
-    - [add-image](#add-image)
     - [Encrypt](#encrypt)
     - [Decrypt](#decrypt)
+    - [add-image](#add-image)
+    - [read](#read)
+    - [fill](#fill)
 - [Resources](#resources)
 
 ## Purpose
@@ -164,20 +164,9 @@ Depending on your level of advanced encryption needs, you (may) need to install 
 
 ## API
 
-### read
-Read Acroform fields from a PDF
-
-- **pdfPath** - The PDF file to read
-- **jsonPath** - optional, path to write JSON file otherwise output to console
-
-### fill
-Fill Acroform fields from a PDF
-
-- **pdfPath** - The PDF file to fill
-- **jsonPath** - The json file to fill pdf with
-- **outPath** - The file to save the decrypted document to. If left blank then it will be the same as the input file || options
-
 ### PDFToImage
+Will create an image for any or every page in a PDF document.
+
 - **password** - The password to the PDF document.
 - **imageType**=jpg - The image type to write to. Currently only jpg or png.
 - **outputPrefix** - Name of PDF document  The prefix to the image file.
@@ -185,14 +174,11 @@ Fill Acroform fields from a PDF
 - **endPage** - The last page to convert, one based.
 - **nonSeq** - false Use the new non sequential parser.
 
-### add-image
-- **pdfPath** - The PDF file to encrypt
-- **outPath** - The file to save the decrypted document to. If left blank then it will be the same as the input file || options
-- **page** - The page number where to drop image
-- **x** - The x cord where to drop image
-- **y** - The y cord where to drop image
+> See [pdfbox.apache.org#pdftoimage](https://pdfbox.apache.org/2.0/commandline.html#pdftoimage)
 
 ### Encrypt
+Will encrypt a PDF document
+
 - **pdfPath** - The PDF file to encrypt
 - **outPath** - The file to save the decrypted document to. If left blank then it will be the same as the input file || options
 - **options** - {}
@@ -209,13 +195,42 @@ Fill Acroform fields from a PDF
     - **canPrintDegraded**:           true  Set the print degraded permission.
     - **keyLength**:                  40, 128 or 256  The number of bits for the encryption key. For 128 and above bits Java Cryptography Extension (JCE) Unlimited Strength Jurisdiction Policy Files must be installed.
 
+> See [pdfbox.apache.org#encrypt](https://pdfbox.apache.org/2.0/commandline.html#encrypt)
+
 ### Decrypt
+Will decrypt a PDF document
+
 - **pdfPath** - The PDF file to decrypt
 - **outPath** - The file to save the decrypted document to. If left blank then it will be the same as the input file || options
 - **options** - {}
     - **password**: Password to the PDF or certificate in keystore.
     - **keyStore**: Path to keystore that holds certificate to decrypt the document (typically a .p12 file). This is only required if the document is encrypted with a certificate, otherwise only the password is required.
     - **alias**:    The alias to the certificate in the keystore.
+
+> See [pdfbox.apache.org#decrypt](https://pdfbox.apache.org/2.0/commandline.html#decrypt)
+
+### read
+Read Acroform fields from a PDF
+
+- **pdfPath** - The PDF file to read
+- **jsonPath** - optional, path to write JSON file otherwise output to console
+
+### fill
+Fill Acroform fields from a PDF
+
+- **pdfPath** - The PDF file to fill
+- **jsonPath** - The json file to fill pdf with
+- **outPath** - The file to save the decrypted document to. If left blank then it will be the same as the input file || options
+
+### add-image
+Insert a single image into a PDF
+
+- **pdfPath** - The PDF file to encrypt
+- **outPath** - The file to save the decrypted document to. If left blank then it will be the same as the input file || options
+- **page** - The page number where to drop image
+- **x** - The x cord where to drop image
+- **y** - The y cord where to drop image
+
 
 ## Resources
 
