@@ -108,11 +108,7 @@ public class App{
   }
 
   public static void addBouncyCastle(){
-    try{
-      Security.addProvider(new BouncyCastleProvider());
-    }catch(Exception e){
-      //System.err.println(e);
-    }
+    Security.addProvider(new BouncyCastleProvider());
   }
 
   private static void usage(){
