@@ -108,6 +108,7 @@ public class App{
   }
 
   public static void addBouncyCastle(){
+    System.out.println("added bouncy");
     Security.addProvider(new BouncyCastleProvider());
   }
 
