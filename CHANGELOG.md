@@ -1,6 +1,10 @@
 # ack-pdfbox - Change Log
 All notable changes to this project will be documented here.
 
+## [1.1.4] - 2016-12-22
+### Added
+- sign
+
 ## [1.1.2] - 2016-12-07
 ### Added
 - PDFToImage

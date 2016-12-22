@@ -1,8 +1,10 @@
-test/*.jpg
-.DS_Store
-updaters/
+unencrypted22.pdf
 i-9-with-sig.pdf
 i-9.pdf.json
+test/*.jpg
+
+.DS_Store
+updaters/
 ackpdfbox/target
 
 target/

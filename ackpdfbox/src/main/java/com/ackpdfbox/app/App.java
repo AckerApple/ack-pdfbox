@@ -8,6 +8,7 @@ import com.ackpdfbox.app.FieldFiller;
 
 import com.ackpdfbox.app.Decrypt;
 import com.ackpdfbox.app.Encrypt;
+import com.ackpdfbox.app.CreateSignature;
 import org.apache.pdfbox.util.Version;
 
 import java.security.Security;
@@ -84,6 +85,15 @@ public class App{
           }
           break;
         
+        case "sign":
+          try{
+            com.ackpdfbox.app.CreateSignature.main(arguments);
+          }catch(Exception e){
+            System.out.println(arguments[0]);
+            e.printStackTrace();
+          }
+          break;
+
         case "pdftoimage":
           try{
             com.ackpdfbox.app.PDFToImage.main(arguments);
