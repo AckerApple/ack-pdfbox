@@ -1,6 +1,6 @@
 {
   "name": "ack-pdfbox",
-  "version": "1.1.5",
+  "version": "1.2.0",
   "description": "Java code for specific pdf manipulations",
   "main": "index.js",
   "directories": {
@@ -14,7 +14,8 @@
     "toimg": "java -jar ackpdfbox/target/ackpdfbox-1.0-SNAPSHOT-jar-with-dependencies.jar pdftoimage test/i-9.pdf -endPage 1",
     "toimg:dist": "java -jar dist/ackpdfbox-1.0-SNAPSHOT-jar-with-dependencies.jar pdftoimage test/i-9.pdf -endPage 1",
     "read:dist": "java -jar dist/ackpdfbox-1.0-SNAPSHOT-jar-with-dependencies.jar read test/i-9.pdf test/i-9.pdf.json",
-    "fill:dist": "java -jar dist/ackpdfbox-1.0-SNAPSHOT-jar-with-dependencies.jar fill test/i-9.pdf test/i-9-with-sig.pdf.json test/i-9-with-sig.pdf"
+    "fill:dist": "java -jar dist/ackpdfbox-1.0-SNAPSHOT-jar-with-dependencies.jar fill test/i-9.pdf test/i-9-with-sig.pdf.json test/i-9-with-sig.pdf",
+    "add-image": "java -jar ackpdfbox/target/ackpdfbox-1.0-SNAPSHOT-jar-with-dependencies.jar add-image test/unencrypted.pdf test/testImage.png test/testImage2.JPG test/testImage.JPG -y -1 -width 100% -page -1 -out test/unencrypted2.pdf"
   },
   "repository": {
     "type": "git",

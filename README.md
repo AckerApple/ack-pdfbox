@@ -244,10 +244,19 @@ Fill Acroform fields from a PDF
 Insert a single image into a PDF
 
 - **pdfPath** - The PDF file to encrypt
-- **outPath** - The file to save the decrypted document to. If left blank then it will be the same as the input file || options
-- **page** - The page number where to drop image
-- **x** - The x cord where to drop image
-- **y** - The y cord where to drop image
+- **imagesPath** - The file image(s) to append to document. Allows multiple image arguments, which is great for appending photos as pages.
+- **options**
+  - **out** - The file to save the decrypted document to. If left blank then it will be the same as the input file || options
+  - **page** - The page number where to drop image. Use -1 to append on a new page
+  - **x** - The x cord where to drop image
+  - **y** - The y cord where to drop image. Use -1 for top
+  - **width** - default is image width. Accepts percent width
+  - **height** - default is image height
+
+Example Add Images as Pages
+```
+java -jar dist/ackpdfbox-1.0-SNAPSHOT-jar-with-dependencies.jar add-image test/unencrypted.pdf test/testImage.png test/testImage2.JPG test/testImage.JPG -y -1 -width 100% -page -1 -out test/unencrypted2.pdf
+```
 
 
 ## Resources

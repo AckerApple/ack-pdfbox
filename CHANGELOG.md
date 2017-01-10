@@ -1,6 +1,10 @@
 # ack-pdfbox - Change Log
 All notable changes to this project will be documented here.
 
+## [1.2.0] - 2017-01-10
+### Breaking Change
+- add-image now works completely different. See README.md
+
 ## [1.1.4] - 2016-12-22
 ### Added
 - sign

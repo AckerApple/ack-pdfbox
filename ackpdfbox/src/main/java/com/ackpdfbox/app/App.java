@@ -2,7 +2,7 @@ package com.ackpdfbox.app;
 
 import java.io.IOException;
 
-import com.ackpdfbox.app.ImageAdder;
+import com.ackpdfbox.app.AddImage;
 import com.ackpdfbox.app.FieldReader;
 import com.ackpdfbox.app.FieldFiller;
 
@@ -52,18 +52,7 @@ public class App{
           break;
 
         case "add-image":
-          if(args.length < 7){
-            addImageUsage();
-          }else{
-            ImageAdder imageAdder = new ImageAdder();
-            imageAdder.loadPdfByPath( args[1] );
-            imageAdder.setOutPath( args[6] );
-            imageAdder.setImagePath( args[2] );
-            imageAdder.setPageNumber( Integer.parseInt(args[3]) );
-            imageAdder.setCords(Float.parseFloat( args[4] ), Float.parseFloat( args[5] ));
-            imageAdder.execute();
-            imageAdder.save();
-          }
+          com.ackpdfbox.app.AddImage.main(args);
           break;
         
         case "encrypt":

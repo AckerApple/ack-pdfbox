@@ -18,6 +18,7 @@ import org.apache.pdfbox.pdmodel.PDPageContentStream;
 import org.apache.pdfbox.pdmodel.PDPage;
 
 public class ImageAdder{
+  public PDImageXObject ximage;
   public PDDocument pdf;
   public String outPath;
   public Integer pageNumber;
@@ -38,6 +39,8 @@ public class ImageAdder{
  
   public void setImagePath(String path) throws IOException{
     this.imageStream = new FileInputStream(path);
+    this.isPngStream = path.indexOf("png")>0;
+    this.ximage = null;
   }
 
   public void setImageByBase64String(String data){
@@ -81,18 +84,27 @@ public class ImageAdder{
     this.pdf = filePathToPdf(path);
   }
 
+  PDImageXObject paramImage() throws IOException{
+    if(this.ximage!=null){
+      return this.ximage;
+    }
+
+    Boolean png = this.isPngStream!=null && this.isPngStream==true;
+    if(png){
+      BufferedImage bImageFromConvert = ImageIO.read(this.imageStream);
+      this.ximage = LosslessFactory.createFromImage(this.pdf, bImageFromConvert);
+    }else{
+      this.ximage = JPEGFactory.createFromStream(this.pdf, this.imageStream);
+    }
+
+    return this.ximage;
+  }
+
   public void execute() throws IOException{
     PDPage pdfPage = this.pdf.getPages().get( this.pageNumber );
     PDPageContentStream contentStream = new PDPageContentStream(this.pdf, pdfPage, true, true, true);
     
-    PDImageXObject ximage = null;
-    if(this.isPngStream!=null && this.isPngStream==true){
-      BufferedImage bImageFromConvert = ImageIO.read(this.imageStream);
-      ximage = LosslessFactory.createFromImage(this.pdf, bImageFromConvert);
-    }else{
-      ximage = JPEGFactory.createFromStream(this.pdf, this.imageStream);
-    }
-
+    PDImageXObject ximage = paramImage();
 
     if(this.width!=null && this.height!=null){
       contentStream.drawImage(ximage, this.x, this.y, this.width, this.height);
