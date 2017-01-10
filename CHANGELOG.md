@@ -1,7 +1,7 @@
 # ack-pdfbox - Change Log
 All notable changes to this project will be documented here.
 
-## [1.2.1] - 2017-01-10
+## [1.2.2] - 2017-01-10
 ### Fix
 - add-image errored when width not present
 

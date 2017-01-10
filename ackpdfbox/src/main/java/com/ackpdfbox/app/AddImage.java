@@ -26,30 +26,42 @@ public final class AddImage{
 
     PDImageXObject ximg = imageAdder.paramImage();
     PDPage samplePage = doc.getPage(0);
-    Float sampleHeight = samplePage.getMediaBox().getHeight();
+    
     Float imgHeight = new Float( ximg.getHeight() );
+    Boolean isPercent = (width!=null && width.indexOf("%")>=0);
 
-    if(width!=null && width.indexOf("%")>=0){
+    if(isPercent){
       Integer percent = Integer.parseInt( width.substring(0, width.length()-1) );
-      Float newWidth = new Float( samplePage.getMediaBox().getWidth() * (percent*.01) );
+      Float pageWidth = samplePage.getMediaBox().getWidth();
+      Float newWidth = new Float( pageWidth * (percent*.01) );
       imageAdder.width = newWidth;
       imgHeight = ximg.getHeight() * (newWidth / ximg.getWidth());
       imageAdder.height = imgHeight;
+    
     }else{
-      imageAdder.width = null;//reset incase already set
+      if(width==null){
+        imageAdder.width = null;
+      }else{
+        imageAdder.width = Float.parseFloat(width);
+      }
+
+      if(height==null){
+        imageAdder.height = null;
+      }else{
+        imageAdder.height = Float.parseFloat(height);
+        imgHeight = imageAdder.height;
+      }
     }
 
-    if(height==null){
-      imageAdder.height = null;//reset incase already set
-    }
-
-    if(y==-1){
+    if(y==null || y==-1){
+      Float sampleHeight = samplePage.getMediaBox().getHeight();
       y = sampleHeight - imgHeight;
     }
 
     if(x==null){
       x = Float.parseFloat("0");
     }
+
 
     imageAdder.setPageNumber( page );
     imageAdder.setCords(x, y);

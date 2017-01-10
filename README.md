@@ -241,7 +241,7 @@ Fill Acroform fields from a PDF
 - **outPath** - The file to save the decrypted document to. If left blank then it will be the same as the input file || options
 
 ### add-image
-Insert a single image into a PDF
+Insert a single image into a PDF or append multi images as individual pages
 
 - **pdfPath** - The PDF file to encrypt
 - **imagesPath** - The file image(s) to append to document. Allows multiple image arguments, which is great for appending photos as pages.
