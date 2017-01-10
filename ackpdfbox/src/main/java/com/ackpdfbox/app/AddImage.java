@@ -29,12 +29,18 @@ public final class AddImage{
     Float sampleHeight = samplePage.getMediaBox().getHeight();
     Float imgHeight = new Float( ximg.getHeight() );
 
-    if(width.indexOf("%")>=0){
+    if(width!=null && width.indexOf("%")>=0){
       Integer percent = Integer.parseInt( width.substring(0, width.length()-1) );
       Float newWidth = new Float( samplePage.getMediaBox().getWidth() * (percent*.01) );
       imageAdder.width = newWidth;
       imgHeight = ximg.getHeight() * (newWidth / ximg.getWidth());
       imageAdder.height = imgHeight;
+    }else{
+      imageAdder.width = null;//reset incase already set
+    }
+
+    if(height==null){
+      imageAdder.height = null;//reset incase already set
     }
 
     if(y==-1){
