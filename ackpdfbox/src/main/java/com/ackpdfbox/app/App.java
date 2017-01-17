@@ -47,7 +47,17 @@ public class App{
           if(args.length < 4){
             fillUsage();
           }else{
-            new FieldFiller(args[1], args[2], args[3]).execute();
+            FieldFiller fieldFiller = new FieldFiller(args[1], args[2], args[3]);
+
+            //add options
+            for( int i=0; i<args.length; i++ ){
+              String key = args[i];
+              if( key.equals( "-flatten" ) ){
+                fieldFiller.flatten = Boolean.parseBoolean( args[++i] );
+              }
+            }
+
+            fieldFiller.execute();
           }
           break;
 

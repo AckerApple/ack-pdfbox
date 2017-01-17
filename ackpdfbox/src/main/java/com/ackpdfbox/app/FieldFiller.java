@@ -28,11 +28,13 @@ public class FieldFiller{
    public String pdfPath;
    public String jsonPath;
    public String outPath;
+   public Boolean flatten;
 
    public FieldFiller(String pdfPath, String jsonPath, String outPath){
     this.pdfPath = pdfPath;
     this.jsonPath = jsonPath;
     this.outPath = outPath;
+    this.flatten = false;
    }
 
    public String getJsonFileString() throws IOException{
@@ -49,6 +51,7 @@ public class FieldFiller{
     PDDocument pdf = PDDocument.load( new File(this.pdfPath) );
     PDDocumentCatalog docCatalog = pdf.getDocumentCatalog();
     PDAcroForm acroForm = docCatalog.getAcroForm();
+    acroForm.setXFA(null);
 
     for(JsonElement field : jarr){
       JsonObject fObject = field.getAsJsonObject();
@@ -101,6 +104,10 @@ public class FieldFiller{
       if(remove!=null && remove.getAsBoolean()==true){
         pdField.getCOSObject().clear();
       }
+    }
+
+    if(this.flatten==true){
+      acroForm.flatten();
     }
 
     return pdf;

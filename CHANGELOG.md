@@ -1,6 +1,12 @@
 # ack-pdfbox - Change Log
 All notable changes to this project will be documented here.
 
+## [1.2.4] - 2017-01-16
+### Fix
+- During acroform fill, XFA is set as to not be supported via acroform.setXFA(null)
+### Added
+- During acroform fill, option to flatten has been added
+
 ## [1.2.2] - 2017-01-10
 ### Fix
 - add-image errored when width not present

@@ -53,7 +53,7 @@ java -jar dist/ackpdfbox-1.0-SNAPSHOT-jar-with-dependencies.jar read test/i-9.pd
 
 ### Fill Acroform From Json File
 ```
-java -jar dist/ackpdfbox-1.0-SNAPSHOT-jar-with-dependencies.jar fill test/i-9.pdf test/i-9-with-sig.pdf.json test/i-9-with-sig.pdf
+java -jar dist/ackpdfbox-1.0-SNAPSHOT-jar-with-dependencies.jar fill test/i-9.pdf test/i-9-with-sig.pdf.json test/i-9-with-sig.pdf -flatten true
 ```
 
 ### Encrypt PDF
@@ -239,6 +239,8 @@ Fill Acroform fields from a PDF
 - **pdfPath** - The PDF file to fill
 - **jsonPath** - The json file to fill pdf with
 - **outPath** - The file to save the decrypted document to. If left blank then it will be the same as the input file || options
+- **options**
+  - **flatten** - Boolean - The form will become uneditable
 
 ### add-image
 Insert a single image into a PDF or append multi images as individual pages

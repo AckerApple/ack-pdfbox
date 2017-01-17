@@ -1,6 +1,6 @@
 {
   "name": "ack-pdfbox",
-  "version": "1.2.3",
+  "version": "1.2.4",
   "description": "Java code for specific pdf manipulations",
   "main": "index.js",
   "directories": {
@@ -10,6 +10,7 @@
     "sign": "java -jar ackpdfbox/target/ackpdfbox-1.0-SNAPSHOT-jar-with-dependencies.jar sign test/pdfbox-test.p12 pdfbox-test-password test/unencrypted.pdf -tsa http://tsa.safecreative.org -out test/unencrypted22.pdf",
     "sign:i9": "java -jar ackpdfbox/target/ackpdfbox-1.0-SNAPSHOT-jar-with-dependencies.jar sign test/pdfbox-test.p12 pdfbox-test-password test/i-9.pdf -tsa http://tsa.safecreative.org -out test/i-922.pdf",
     "fill": "java -jar ackpdfbox/target/ackpdfbox-1.0-SNAPSHOT-jar-with-dependencies.jar fill test/i-9.pdf test/i-9-with-sig.pdf.json test/i-9-with-sig.pdf",
+    "fill:flatten": "java -jar ackpdfbox/target/ackpdfbox-1.0-SNAPSHOT-jar-with-dependencies.jar fill test/i-9.pdf test/i-9-with-sig.pdf.json test/i-9-with-sig.pdf -flatten true",
     "read": "java -jar ackpdfbox/target/ackpdfbox-1.0-SNAPSHOT-jar-with-dependencies.jar read test/i-9.pdf test/i-9.pdf.json",
     "toimg": "java -jar ackpdfbox/target/ackpdfbox-1.0-SNAPSHOT-jar-with-dependencies.jar pdftoimage test/i-9.pdf -endPage 1",
     "toimg:dist": "java -jar dist/ackpdfbox-1.0-SNAPSHOT-jar-with-dependencies.jar pdftoimage test/i-9.pdf -endPage 1",
