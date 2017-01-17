@@ -16,6 +16,7 @@
  */
 package com.ackpdfbox.app;
 
+import java.util.*;
 import java.awt.HeadlessException;
 import java.awt.Toolkit;
 import java.awt.image.BufferedImage;
@@ -67,7 +68,8 @@ public final class PDFToImage
      *
      * @throws IOException If there is an error parsing the document.
      */
-    public static String main( String[] args ) throws IOException{
+    public static ArrayList<String> main( String[] args ) throws IOException{
+        ArrayList<String> images = new ArrayList<String>();
         //turn off pdfbox warnings
         java.util.logging.Logger.getLogger("org.apache.pdfbox").setLevel(java.util.logging.Level.OFF);//Acker:added
 
@@ -237,6 +239,7 @@ public final class PDFToImage
                 {
                     BufferedImage image = renderer.renderImageWithDPI(i, dpi, imageType);
                     String fileName = outputPrefix + (i + 1) + "." + imageFormat;
+                    images.add( fileName );//Acker:added
                     success &= ImageIOUtil.writeImage(image, fileName, dpi);
                 }
 
@@ -266,7 +269,7 @@ public final class PDFToImage
             }
         }
 
-        return startPage+"-"+endPage;
+        return images;
     }
 
     /**

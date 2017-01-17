@@ -11,6 +11,9 @@ import com.ackpdfbox.app.Encrypt;
 import com.ackpdfbox.app.CreateSignature;
 import org.apache.pdfbox.util.Version;
 
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+
 import java.security.Security;
 import org.bouncycastle.jce.provider.BouncyCastleProvider;
 
@@ -95,8 +98,9 @@ public class App{
 
         case "pdftoimage":
           try{
-            String result = com.ackpdfbox.app.PDFToImage.main(arguments);
-            System.out.println(result);
+            Gson gson = new GsonBuilder().create();
+
+            System.out.println( gson.toJson( com.ackpdfbox.app.PDFToImage.main(arguments) ) );
           }catch(Exception e){
             System.out.println(arguments[0]);
             e.printStackTrace();

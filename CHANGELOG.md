@@ -1,10 +1,10 @@
 # ack-pdfbox - Change Log
 All notable changes to this project will be documented here.
 
-## [1.2.5] - 2017-01-17
+## [1.2.6] - 2017-01-17
 ### Enhanced
 - during pdftoimage, PDFBox warnings are suppressed
-- pdftoimage returns String of startPage-endPage
+- pdftoimage returns JSON array of relative-image-paths
 
 ## [1.2.4] - 2017-01-16
 ### Fix
