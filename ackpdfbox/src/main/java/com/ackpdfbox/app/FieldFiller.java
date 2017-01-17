@@ -51,7 +51,7 @@ public class FieldFiller{
     PDDocument pdf = PDDocument.load( new File(this.pdfPath) );
     PDDocumentCatalog docCatalog = pdf.getDocumentCatalog();
     PDAcroForm acroForm = docCatalog.getAcroForm();
-    acroForm.setXFA(null);
+    acroForm.setXFA(null);//XFA must be turned off for Acrobat XI and other advanced PDF form readers
 
     for(JsonElement field : jarr){
       JsonObject fObject = field.getAsJsonObject();
@@ -107,7 +107,7 @@ public class FieldFiller{
     }
 
     if(this.flatten==true){
-      acroForm.flatten();
+      acroForm.flatten();//Makes uneditable. Makes prettier by removing input highlights
     }
 
     return pdf;

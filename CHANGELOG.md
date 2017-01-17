@@ -1,6 +1,11 @@
 # ack-pdfbox - Change Log
 All notable changes to this project will be documented here.
 
+## [1.2.5] - 2017-01-17
+### Enhanced
+- during pdftoimage, PDFBox warnings are suppressed
+- pdftoimage returns String of startPage-endPage
+
 ## [1.2.4] - 2017-01-16
 ### Fix
 - During acroform fill, XFA is set as to not be supported via acroform.setXFA(null)

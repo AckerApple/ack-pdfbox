@@ -67,8 +67,10 @@ public final class PDFToImage
      *
      * @throws IOException If there is an error parsing the document.
      */
-    public static void main( String[] args ) throws IOException
-    {
+    public static String main( String[] args ) throws IOException{
+        //turn off pdfbox warnings
+        java.util.logging.Logger.getLogger("org.apache.pdfbox").setLevel(java.util.logging.Level.OFF);//Acker:added
+
         // suppress the Dock icon on OS X
         System.setProperty("apple.awt.UIElement", "true");
 
@@ -263,6 +265,8 @@ public final class PDFToImage
                 }
             }
         }
+
+        return startPage+"-"+endPage;
     }
 
     /**
@@ -310,7 +314,7 @@ public final class PDFToImage
     {
         for (PDPage page : document.getPages())
         {
-            System.out.println("resizing page");
+            //System.out.println("resizing page");
             PDRectangle rectangle = new PDRectangle();
             rectangle.setLowerLeftX(a);
             rectangle.setLowerLeftY(b);

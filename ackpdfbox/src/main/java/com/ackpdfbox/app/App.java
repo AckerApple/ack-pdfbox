@@ -95,7 +95,8 @@ public class App{
 
         case "pdftoimage":
           try{
-            com.ackpdfbox.app.PDFToImage.main(arguments);
+            String result = com.ackpdfbox.app.PDFToImage.main(arguments);
+            System.out.println(result);
           }catch(Exception e){
             System.out.println(arguments[0]);
             e.printStackTrace();
