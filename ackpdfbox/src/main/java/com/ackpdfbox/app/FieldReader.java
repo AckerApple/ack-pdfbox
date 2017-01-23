@@ -15,6 +15,7 @@ import org.apache.pdfbox.pdmodel.PDDocumentCatalog;
 import org.apache.pdfbox.pdmodel.interactive.form.PDAcroForm;
 import org.apache.pdfbox.pdmodel.interactive.form.PDField;
 import org.apache.pdfbox.pdmodel.interactive.form.PDComboBox;
+import org.apache.pdfbox.pdmodel.interactive.form.PDCheckBox;
 import org.apache.pdfbox.pdmodel.interactive.form.PDNonTerminalField;
 
 //choices
@@ -53,7 +54,7 @@ public class FieldReader{
     List<PDField> fields = acroForm.getFields();
 
     JsonArray jArr = new JsonArray();
-    JsonArray rtn = fieldsOntoArray(fields,jArr);
+    JsonArray rtn = fieldsOntoArray(fields, jArr, acroForm);
 
     return rtn;
   }
@@ -68,6 +69,11 @@ public class FieldReader{
     COSDictionary fieldDict = field.getCOSObject();
     //COSDictionary fieldDict = field.getDictionary();
     COSArray fieldAreaArray = (COSArray) fieldDict.getDictionaryObject(COSName.RECT);
+
+    if(fieldAreaArray==null){
+      return null;
+    }
+
     PDRectangle result = new PDRectangle(fieldAreaArray);
     return result;
   }
@@ -76,22 +82,24 @@ public class FieldReader{
     PDRectangle rect = getFieldArea(field);
     JsonObject jo = new JsonObject();
 
-    Float lowerLeftX = rect.getLowerLeftX();
-    Float upperRightX = rect.getUpperRightX();
-    Float lowerLeftY = rect.getLowerLeftY();
-    Float upperRightY = rect.getUpperRightY();
+    if(rect!=null){
+      Float lowerLeftX = rect.getLowerLeftX();
+      Float upperRightX = rect.getUpperRightX();
+      Float lowerLeftY = rect.getLowerLeftY();
+      Float upperRightY = rect.getUpperRightY();
 
-    jo.addProperty("x", Float.toString(lowerLeftX));
-    //jo.addProperty("lowerLeftX", Float.toString(lowerLeftX));
-    
-    jo.addProperty("y", Float.toString(lowerLeftY));
-    //jo.addProperty("lowerLeftY", Float.toString(lowerLeftY));
-    
-    //jo.addProperty("upperRightX", Float.toString(upperRightX));
-    //jo.addProperty("upperRightY", Float.toString(upperRightY));
+      jo.addProperty("x", Float.toString(lowerLeftX));
+      //jo.addProperty("lowerLeftX", Float.toString(lowerLeftX));
+      
+      jo.addProperty("y", Float.toString(lowerLeftY));
+      //jo.addProperty("lowerLeftY", Float.toString(lowerLeftY));
+      
+      //jo.addProperty("upperRightX", Float.toString(upperRightX));
+      //jo.addProperty("upperRightY", Float.toString(upperRightY));
 
-    jo.addProperty("width", Float.toString(upperRightX-lowerLeftX));
-    jo.addProperty("height", Float.toString(upperRightY-lowerLeftY));
+      jo.addProperty("width", Float.toString(upperRightX-lowerLeftX));
+      jo.addProperty("height", Float.toString(upperRightY-lowerLeftY));
+    }
     
     return jo;
   }
@@ -106,24 +114,24 @@ public class FieldReader{
   }
 
   /** loop parent-fields containers and recurse thru to append to an array only the input-fields */
-  private JsonArray parentToFieldsArray(PDField field, JsonArray array){
+  private JsonArray parentToFieldsArray(PDField field, JsonArray array, PDAcroForm acroForm){
     for (PDField child : ((PDNonTerminalField)field).getChildren()){
       if (child instanceof PDNonTerminalField){//is container of fields
-        parentToFieldsArray(child, array);
+        parentToFieldsArray(child, array, acroForm);
       }else{
-        array.add( jsonObByField(child) );
+        array.add( jsonObByField(child, acroForm) );
       }
     }
     return array;
   }
 
   /** loop fields and recurse thru children to append to an array only the input-fields */
-  private JsonArray fieldsOntoArray(List<PDField> fields, JsonArray array){
+  private JsonArray fieldsOntoArray(List<PDField> fields, JsonArray array, PDAcroForm acroForm){
     for (PDField loopField : fields){
       if (loopField instanceof PDNonTerminalField){//is container of fields
-        parentToFieldsArray(loopField, array);
+        parentToFieldsArray(loopField, array, acroForm);
       }else{
-        array.add( jsonObByField(loopField) );
+        array.add( jsonObByField(loopField, acroForm) );
       }
     }
 
@@ -141,14 +149,15 @@ public class FieldReader{
   }
 */
 
-  private JsonObject jsonObByField(PDField field){
+  private JsonObject jsonObByField(PDField field, PDAcroForm acroForm){
     JsonObject jo = new JsonObject();
-    
-    jo.addProperty("fullyQualifiedName", field.getFullyQualifiedName());
+    String className = field.getClass().getName();
+    String fullname = field.getFullyQualifiedName();
+    jo.addProperty("fullyQualifiedName", fullname);
     jo.addProperty("isReadOnly", field.isReadOnly());
     
     jo.addProperty("partialName", field.getPartialName());
-    jo.addProperty("type", field.getClass().getName());
+    jo.addProperty("type", className);
     jo.addProperty("isRequired", field.isRequired());
     jo.addProperty("page", getPageByField(field));
     jo.add("cords", getFieldCords(field));
@@ -156,6 +165,9 @@ public class FieldReader{
     String value = field.getValueAsString();
     if(field instanceof PDComboBox && value=="[]"){//is empty choice
       value = "";
+    }else if(className=="org.apache.pdfbox.pdmodel.interactive.form.PDCheckBox"){//is empty choice
+      PDCheckBox pDCheckBox = (PDCheckBox) acroForm.getField(fullname);
+      jo.addProperty("onValue", pDCheckBox.getOnValue());
     }
 
     jo.addProperty("value", value);

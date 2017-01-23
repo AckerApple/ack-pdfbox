@@ -1,6 +1,6 @@
 {
   "name": "ack-pdfbox",
-  "version": "1.2.6",
+  "version": "1.2.7",
   "description": "Java code for specific pdf manipulations",
   "main": "index.js",
   "directories": {
@@ -12,6 +12,7 @@
     "fill": "java -jar ackpdfbox/target/ackpdfbox-1.0-SNAPSHOT-jar-with-dependencies.jar fill test/i-9.pdf test/i-9-with-sig.pdf.json test/i-9-with-sig.pdf",
     "fill:flatten": "java -jar ackpdfbox/target/ackpdfbox-1.0-SNAPSHOT-jar-with-dependencies.jar fill test/i-9.pdf test/i-9-with-sig.pdf.json test/i-9-with-sig.pdf -flatten true",
     "read": "java -jar ackpdfbox/target/ackpdfbox-1.0-SNAPSHOT-jar-with-dependencies.jar read test/i-9.pdf test/i-9.pdf.json",
+    "read:it2104": "java -jar ackpdfbox/target/ackpdfbox-1.0-SNAPSHOT-jar-with-dependencies.jar read test/it2104_fill_in.pdf test/it2104_fill_in.pdf.json",
     "toimg": "java -jar ackpdfbox/target/ackpdfbox-1.0-SNAPSHOT-jar-with-dependencies.jar pdftoimage test/i-9.pdf -endPage 1",
     "toimg:dist": "java -jar dist/ackpdfbox-1.0-SNAPSHOT-jar-with-dependencies.jar pdftoimage test/i-9.pdf -endPage 1",
     "read:dist": "java -jar dist/ackpdfbox-1.0-SNAPSHOT-jar-with-dependencies.jar read test/i-9.pdf test/i-9.pdf.json",

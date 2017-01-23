@@ -22,6 +22,8 @@ import org.apache.pdfbox.cos.COSName;
 import org.apache.pdfbox.pdmodel.PDDocument;
 import org.apache.pdfbox.pdmodel.PDDocumentCatalog;
 import org.apache.pdfbox.pdmodel.interactive.form.PDField;
+import org.apache.pdfbox.pdmodel.interactive.form.PDComboBox;
+import org.apache.pdfbox.pdmodel.interactive.form.PDCheckBox;
 import org.apache.pdfbox.pdmodel.interactive.form.PDAcroForm;
 
 public class FieldFiller{
@@ -56,19 +58,22 @@ public class FieldFiller{
     for(JsonElement field : jarr){
       JsonObject fObject = field.getAsJsonObject();
      
-      String name = fObject.get("fullyQualifiedName").getAsString();
+      String fullname = fObject.get("fullyQualifiedName").getAsString();
       JsonElement value = fObject.get("value");
       JsonElement remove = fObject.get("remove");
 
-      //System.out.println(name+"="+value);
+      //System.out.println(fullname+"="+value);
       
-      PDField pdField = acroForm.getField(name);
+      PDField pdField = acroForm.getField(fullname);
       Boolean isReadOnly = pdField.isReadOnly();
       if(isReadOnly==true){
         pdField.setReadOnly(false);
       }
-      
-      if(value!=null){
+
+      if(pdField.getClass().getName()=="org.apache.pdfbox.pdmodel.interactive.form.PDCheckBox" && value.getAsString()!="OFF"){
+        PDCheckBox pDCheckBox = (PDCheckBox) acroForm.getField(fullname);
+        pDCheckBox.check();
+      }else if(value!=null){
         pdField.setValue(value.getAsString());
       }
 

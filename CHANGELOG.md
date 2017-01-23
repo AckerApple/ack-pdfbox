@@ -1,6 +1,10 @@
 # ack-pdfbox - Change Log
 All notable changes to this project will be documented here.
 
+## [1.2.7] - 2017-01-17
+### Enhanced
+- PDCheckBox handling
+
 ## [1.2.6] - 2017-01-17
 ### Enhanced
 - during pdftoimage, PDFBox warnings are suppressed
