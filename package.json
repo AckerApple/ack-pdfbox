@@ -1,6 +1,6 @@
 {
   "name": "ack-pdfbox",
-  "version": "1.2.7",
+  "version": "1.2.8",
   "description": "Java code for specific pdf manipulations",
   "main": "index.js",
   "directories": {
@@ -9,14 +9,14 @@
   "scripts": {
     "sign": "java -jar ackpdfbox/target/ackpdfbox-1.0-SNAPSHOT-jar-with-dependencies.jar sign test/pdfbox-test.p12 pdfbox-test-password test/unencrypted.pdf -tsa http://tsa.safecreative.org -out test/unencrypted22.pdf",
     "sign:i9": "java -jar ackpdfbox/target/ackpdfbox-1.0-SNAPSHOT-jar-with-dependencies.jar sign test/pdfbox-test.p12 pdfbox-test-password test/i-9.pdf -tsa http://tsa.safecreative.org -out test/i-922.pdf",
-    "fill": "java -jar ackpdfbox/target/ackpdfbox-1.0-SNAPSHOT-jar-with-dependencies.jar fill test/i-9.pdf test/i-9-with-sig.pdf.json test/i-9-with-sig.pdf",
-    "fill:flatten": "java -jar ackpdfbox/target/ackpdfbox-1.0-SNAPSHOT-jar-with-dependencies.jar fill test/i-9.pdf test/i-9-with-sig.pdf.json test/i-9-with-sig.pdf -flatten true",
+    "fill": "java -jar ackpdfbox/target/ackpdfbox-1.0-SNAPSHOT-jar-with-dependencies.jar fill test/i-9.pdf test/i-9.pdf.json test/i-9-with-sig.pdf",
+    "fill:flatten": "java -jar ackpdfbox/target/ackpdfbox-1.0-SNAPSHOT-jar-with-dependencies.jar fill test/i-9.pdf test/i-9.pdf.json test/i-9-with-sig.pdf -flatten true",
     "read": "java -jar ackpdfbox/target/ackpdfbox-1.0-SNAPSHOT-jar-with-dependencies.jar read test/i-9.pdf test/i-9.pdf.json",
     "read:it2104": "java -jar ackpdfbox/target/ackpdfbox-1.0-SNAPSHOT-jar-with-dependencies.jar read test/it2104_fill_in.pdf test/it2104_fill_in.pdf.json",
     "toimg": "java -jar ackpdfbox/target/ackpdfbox-1.0-SNAPSHOT-jar-with-dependencies.jar pdftoimage test/i-9.pdf -endPage 1",
     "toimg:dist": "java -jar dist/ackpdfbox-1.0-SNAPSHOT-jar-with-dependencies.jar pdftoimage test/i-9.pdf -endPage 1",
     "read:dist": "java -jar dist/ackpdfbox-1.0-SNAPSHOT-jar-with-dependencies.jar read test/i-9.pdf test/i-9.pdf.json",
-    "fill:dist": "java -jar dist/ackpdfbox-1.0-SNAPSHOT-jar-with-dependencies.jar fill test/i-9.pdf test/i-9-with-sig.pdf.json test/i-9-with-sig.pdf",
+    "fill:dist": "java -jar dist/ackpdfbox-1.0-SNAPSHOT-jar-with-dependencies.jar fill test/i-9.pdf test/i-9.pdf.json test/i-9-with-sig.pdf",
     "add-image": "java -jar ackpdfbox/target/ackpdfbox-1.0-SNAPSHOT-jar-with-dependencies.jar add-image test/unencrypted.pdf test/testImage.png test/testImage2.JPG test/testImage.JPG -y -1 -width 100% -page -1 -out test/unencrypted2.pdf"
   },
   "repository": {

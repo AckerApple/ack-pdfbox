@@ -1,6 +1,10 @@
 # ack-pdfbox - Change Log
 All notable changes to this project will be documented here.
 
+## [1.2.8] - 2017-01-17
+### Fix
+- PDCheckBox being accidentally checked
+
 ## [1.2.7] - 2017-01-17
 ### Enhanced
 - PDCheckBox handling
