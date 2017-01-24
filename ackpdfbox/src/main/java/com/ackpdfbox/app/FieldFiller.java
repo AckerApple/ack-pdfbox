@@ -70,7 +70,7 @@ public class FieldFiller{
         pdField.setReadOnly(false);
       }
 
-      if(pdField.getClass().getName()=="org.apache.pdfbox.pdmodel.interactive.form.PDCheckBox" && value!=null && value.getAsString().length()>0 && value.getAsString()!="OFF"){
+      if(pdField.getClass().getName()=="org.apache.pdfbox.pdmodel.interactive.form.PDCheckBox" && value!=null && value.getAsString().length()>0 && value.getAsString().toLowerCase()!="off"){
         PDCheckBox pDCheckBox = (PDCheckBox) acroForm.getField(fullname);
         pDCheckBox.check();
       }else if(value!=null){
