@@ -1,6 +1,6 @@
 {
   "name": "ack-pdfbox",
-  "version": "1.2.11",
+  "version": "1.2.12",
   "description": "Java code for specific pdf manipulations",
   "main": "index.js",
   "directories": {

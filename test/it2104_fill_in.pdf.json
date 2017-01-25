@@ -124,7 +124,7 @@
       "Higher Rate",
       "Single/HOH"
     ],
-    "value": "Married"
+    "value": "married"
   },
   {
     "fullyQualifiedName": "Resident",
@@ -138,7 +138,7 @@
       "No",
       "Yes"
     ],
-    "value": "No"
+    "value": "no"
   },
   {
     "fullyQualifiedName": "Resident of Yonkers",
@@ -152,7 +152,7 @@
       "No",
       "Yes"
     ],
-    "value": "No"
+    "value": "yes"
   },
   {
     "fullyQualifiedName": "line 1",
