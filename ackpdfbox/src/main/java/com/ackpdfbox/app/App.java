@@ -10,6 +10,7 @@ import com.ackpdfbox.app.Decrypt;
 import com.ackpdfbox.app.Encrypt;
 import com.ackpdfbox.app.CreateSignature;
 import org.apache.pdfbox.util.Version;
+import org.apache.tools.ant.types.Commandline;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -35,6 +36,15 @@ public class App{
       System.arraycopy(args, 1, arguments, 0, arguments.length);
 
       switch( command.toLowerCase() ){
+        case "combo":
+          for( int i=1; i<args.length; i++ ){
+            String subCommand = args[i];
+            //System.out.println( "subCommand:" + subCommand );
+            String myArgs[] = Commandline.translateCommandline(subCommand);
+            main(myArgs);
+          }
+          break;
+
         case "read":
           FieldReader fieldReader = new FieldReader();
           fieldReader.loadPdfByPath( args[1] );
@@ -53,7 +63,7 @@ public class App{
             FieldFiller fieldFiller = new FieldFiller(args[1], args[2], args[3]);
 
             //add options
-            for( int i=0; i<args.length; i++ ){
+            for( int i=1; i<args.length; i++ ){
               String key = args[i];
               if( key.equals( "-flatten" ) ){
                 fieldFiller.flatten = Boolean.parseBoolean( args[++i] );
