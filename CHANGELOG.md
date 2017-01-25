@@ -1,6 +1,11 @@
 # ack-pdfbox - Change Log
 All notable changes to this project will be documented here.
 
+## [1.2.11] - 2017-01-17
+### Fixed
+- better handling of Checkboxes that act as radios
+- Only output isReadOnly when input is infact readonly
+
 ## [1.2.8] - 2017-01-17
 ### Fix
 - PDCheckBox being accidentally checked

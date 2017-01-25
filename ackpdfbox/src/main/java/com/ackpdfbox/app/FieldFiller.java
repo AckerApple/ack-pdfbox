@@ -21,35 +21,38 @@ import org.apache.pdfbox.cos.COSName;
 
 import org.apache.pdfbox.pdmodel.PDDocument;
 import org.apache.pdfbox.pdmodel.PDDocumentCatalog;
-import org.apache.pdfbox.pdmodel.interactive.form.PDField;
-import org.apache.pdfbox.pdmodel.interactive.form.PDComboBox;
-import org.apache.pdfbox.pdmodel.interactive.form.PDCheckBox;
 import org.apache.pdfbox.pdmodel.interactive.form.PDAcroForm;
 
-public class FieldFiller{
-   public String pdfPath;
-   public String jsonPath;
-   public String outPath;
-   public Boolean flatten;
+import org.apache.pdfbox.pdmodel.interactive.form.PDField;
+//import org.apache.pdfbox.pdmodel.interactive.form.PDComboBox;
+import org.apache.pdfbox.pdmodel.interactive.form.PDCheckBox;
+import org.apache.pdfbox.pdmodel.interactive.form.PDRadioButton;
+//import org.apache.pdfbox.pdmodel.interactive.form.PDRadioCollection;
 
-   public FieldFiller(String pdfPath, String jsonPath, String outPath){
+public class FieldFiller{
+  public String pdfPath;
+  public String jsonPath;
+  public String outPath;
+  public Boolean flatten;
+
+  public FieldFiller(String pdfPath, String jsonPath, String outPath){
     this.pdfPath = pdfPath;
     this.jsonPath = jsonPath;
     this.outPath = outPath;
     this.flatten = false;
-   }
+  }
 
-   public String getJsonFileString() throws IOException{
+  public String getJsonFileString() throws IOException{
     byte[] encoded = Files.readAllBytes( Paths.get(this.jsonPath) );
     return new String(encoded, Charset.forName("UTF-8"));
-   }
+  }
 
-   private JsonArray getJsonArray() throws IOException{
+  private JsonArray getJsonArray() throws IOException{
     String string = getJsonFileString();
     return new Gson().fromJson(string, JsonArray.class);
-   }
+  }
 
-   private PDDocument loopJsonArray(JsonArray jarr) throws IOException{
+  private PDDocument loopJsonArray(JsonArray jarr) throws IOException{
     PDDocument pdf = PDDocument.load( new File(this.pdfPath) );
     PDDocumentCatalog docCatalog = pdf.getDocumentCatalog();
     PDAcroForm acroForm = docCatalog.getAcroForm();
@@ -70,9 +73,9 @@ public class FieldFiller{
         pdField.setReadOnly(false);
       }
 
-      if(pdField.getClass().getName()=="org.apache.pdfbox.pdmodel.interactive.form.PDCheckBox" && value!=null && value.getAsString().length()>0 && !value.getAsString().toLowerCase().equals("off")){
+      if(pdField instanceof PDCheckBox){
         PDCheckBox pDCheckBox = (PDCheckBox) acroForm.getField(fullname);
-        pDCheckBox.check();
+        fillCheckbox(pDCheckBox, value);
       }else if(value!=null){
         pdField.setValue( value.getAsString() );
       }
@@ -116,13 +119,42 @@ public class FieldFiller{
     }
 
     return pdf;
-   }
+  }
 
-   public void execute() throws IOException{
+  public void execute() throws IOException{
     JsonArray jarr = getJsonArray();
     PDDocument pdf = loopJsonArray(jarr);
     pdf.setAllSecurityToBeRemoved(true);
     pdf.save(this.outPath);
     pdf.close();
-   }
+  }
+
+  private void fillCheckbox(PDCheckBox pDCheckBox, JsonElement value) throws IOException{
+    if(value==null){
+      return;
+    }
+
+    String valueString = value.getAsString();
+    
+    Boolean checkedByValue = false;
+    java.util.Set<String> onValues = pDCheckBox.getOnValues();
+    for(String checkValue : onValues){
+      //System.out.println( checkValue+" - "+ );
+      if(checkValue.equals(valueString)){
+        pDCheckBox.setValue( valueString );
+        checkedByValue = true;
+      }
+    }
+
+    if(!checkedByValue){
+      Boolean checkOff = valueString.toLowerCase().equals("off");
+      Boolean checkOn = valueString.length()>0 && !checkOff;
+      
+      if(checkOff){
+        pDCheckBox.unCheck();
+      }else if(checkOn){
+        pDCheckBox.check();
+      }
+    }
+  }
 }

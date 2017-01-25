@@ -154,7 +154,10 @@ public class FieldReader{
     String className = field.getClass().getName();
     String fullname = field.getFullyQualifiedName();
     jo.addProperty("fullyQualifiedName", fullname);
-    jo.addProperty("isReadOnly", field.isReadOnly());
+
+    if( field.isReadOnly() ){
+      jo.addProperty("isReadOnly", field.isReadOnly());
+    }
     
     jo.addProperty("partialName", field.getPartialName());
     jo.addProperty("type", className);
@@ -165,11 +168,20 @@ public class FieldReader{
     String value = field.getValueAsString();
     if(field instanceof PDComboBox && value=="[]"){//is empty choice
       value = "";
-    }else if(className=="org.apache.pdfbox.pdmodel.interactive.form.PDCheckBox"){//is empty choice
+    }else if(field instanceof PDCheckBox){//is empty choice
       PDCheckBox pDCheckBox = (PDCheckBox) acroForm.getField(fullname);
       jo.addProperty("onValue", pDCheckBox.getOnValue());
-    }
+      JsonArray onValueArray = new JsonArray();
 
+      java.util.Set<String> onValues = pDCheckBox.getOnValues();
+      for(String checkValue : onValues){
+        onValueArray.add( checkValue );
+      }
+
+
+      jo.add("onValues", onValueArray);
+      //jo.addProperty("exportValues", pDCheckBox.getExportValues().toString());
+    }
     jo.addProperty("value", value);
 /*
     if(field instanceof PDChoice){

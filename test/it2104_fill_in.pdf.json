@@ -1,7 +1,6 @@
 [
   {
     "fullyQualifiedName": "First name and middle initial",
-    "isReadOnly": false,
     "partialName": "First name and middle initial",
     "type": "org.apache.pdfbox.pdmodel.interactive.form.PDTextField",
     "isRequired": false,
@@ -16,7 +15,6 @@
   },
   {
     "fullyQualifiedName": "Last name",
-    "isReadOnly": false,
     "partialName": "Last name",
     "type": "org.apache.pdfbox.pdmodel.interactive.form.PDTextField",
     "isRequired": false,
@@ -31,7 +29,6 @@
   },
   {
     "fullyQualifiedName": "Permanent mailing address",
-    "isReadOnly": false,
     "partialName": "Permanent mailing address",
     "type": "org.apache.pdfbox.pdmodel.interactive.form.PDTextField",
     "isRequired": false,
@@ -46,7 +43,6 @@
   },
   {
     "fullyQualifiedName": "Apartment number",
-    "isReadOnly": false,
     "partialName": "Apartment number",
     "type": "org.apache.pdfbox.pdmodel.interactive.form.PDTextField",
     "isRequired": false,
@@ -61,7 +57,6 @@
   },
   {
     "fullyQualifiedName": "City, village or post office",
-    "isReadOnly": false,
     "partialName": "City, village or post office",
     "type": "org.apache.pdfbox.pdmodel.interactive.form.PDTextField",
     "isRequired": false,
@@ -76,7 +71,6 @@
   },
   {
     "fullyQualifiedName": "State",
-    "isReadOnly": false,
     "partialName": "State",
     "type": "org.apache.pdfbox.pdmodel.interactive.form.PDTextField",
     "isRequired": false,
@@ -91,7 +85,6 @@
   },
   {
     "fullyQualifiedName": "ZIP code",
-    "isReadOnly": false,
     "partialName": "ZIP code",
     "type": "org.apache.pdfbox.pdmodel.interactive.form.PDTextField",
     "isRequired": false,
@@ -106,7 +99,6 @@
   },
   {
     "fullyQualifiedName": "Your SSN",
-    "isReadOnly": false,
     "partialName": "Your SSN",
     "type": "org.apache.pdfbox.pdmodel.interactive.form.PDTextField",
     "isRequired": false,
@@ -121,40 +113,49 @@
   },
   {
     "fullyQualifiedName": "Status",
-    "isReadOnly": false,
     "partialName": "Status",
     "type": "org.apache.pdfbox.pdmodel.interactive.form.PDCheckBox",
     "isRequired": false,
     "page": 0,
     "cords": {},
     "onValue": "Single/HOH",
-    "value": ""
+    "onValues": [
+      "Married",
+      "Higher Rate",
+      "Single/HOH"
+    ],
+    "value": "Married"
   },
   {
     "fullyQualifiedName": "Resident",
-    "isReadOnly": false,
     "partialName": "Resident",
     "type": "org.apache.pdfbox.pdmodel.interactive.form.PDCheckBox",
     "isRequired": false,
     "page": 0,
     "cords": {},
     "onValue": "Yes",
-    "value": ""
+    "onValues": [
+      "No",
+      "Yes"
+    ],
+    "value": "No"
   },
   {
     "fullyQualifiedName": "Resident of Yonkers",
-    "isReadOnly": false,
     "partialName": "Resident of Yonkers",
     "type": "org.apache.pdfbox.pdmodel.interactive.form.PDCheckBox",
     "isRequired": false,
     "page": 0,
     "cords": {},
     "onValue": "Yes",
-    "value": ""
+    "onValues": [
+      "No",
+      "Yes"
+    ],
+    "value": "No"
   },
   {
     "fullyQualifiedName": "line 1",
-    "isReadOnly": false,
     "partialName": "line 1",
     "type": "org.apache.pdfbox.pdmodel.interactive.form.PDTextField",
     "isRequired": false,
@@ -169,7 +170,6 @@
   },
   {
     "fullyQualifiedName": "line 2",
-    "isReadOnly": false,
     "partialName": "line 2",
     "type": "org.apache.pdfbox.pdmodel.interactive.form.PDTextField",
     "isRequired": false,
@@ -184,7 +184,6 @@
   },
   {
     "fullyQualifiedName": "line 3",
-    "isReadOnly": false,
     "partialName": "line 3",
     "type": "org.apache.pdfbox.pdmodel.interactive.form.PDTextField",
     "isRequired": false,
@@ -199,7 +198,6 @@
   },
   {
     "fullyQualifiedName": "line 4",
-    "isReadOnly": false,
     "partialName": "line 4",
     "type": "org.apache.pdfbox.pdmodel.interactive.form.PDTextField",
     "isRequired": false,
@@ -214,7 +212,6 @@
   },
   {
     "fullyQualifiedName": "line 5",
-    "isReadOnly": false,
     "partialName": "line 5",
     "type": "org.apache.pdfbox.pdmodel.interactive.form.PDTextField",
     "isRequired": false,
@@ -229,7 +226,6 @@
   },
   {
     "fullyQualifiedName": "Date",
-    "isReadOnly": false,
     "partialName": "Date",
     "type": "org.apache.pdfbox.pdmodel.interactive.form.PDTextField",
     "isRequired": false,
@@ -244,7 +240,6 @@
   },
   {
     "fullyQualifiedName": "employee is a new hire",
-    "isReadOnly": false,
     "partialName": "employee is a new hire",
     "type": "org.apache.pdfbox.pdmodel.interactive.form.PDCheckBox",
     "isRequired": false,
@@ -256,11 +251,13 @@
       "height": "11.278992"
     },
     "onValue": "Yes",
+    "onValues": [
+      "Yes"
+    ],
     "value": ""
   },
   {
     "fullyQualifiedName": "employee claims more than 14 exemption",
-    "isReadOnly": false,
     "partialName": "employee claims more than 14 exemption",
     "type": "org.apache.pdfbox.pdmodel.interactive.form.PDCheckBox",
     "isRequired": false,
@@ -272,11 +269,13 @@
       "height": "11.02301"
     },
     "onValue": "Yes",
+    "onValues": [
+      "Yes"
+    ],
     "value": ""
   },
   {
     "fullyQualifiedName": "Employer\u0027s name and address",
-    "isReadOnly": false,
     "partialName": "Employer\u0027s name and address",
     "type": "org.apache.pdfbox.pdmodel.interactive.form.PDTextField",
     "isRequired": false,
@@ -291,7 +290,6 @@
   },
   {
     "fullyQualifiedName": "Employer\u0027s name and address-2",
-    "isReadOnly": false,
     "partialName": "Employer\u0027s name and address-2",
     "type": "org.apache.pdfbox.pdmodel.interactive.form.PDTextField",
     "isRequired": false,
@@ -306,7 +304,6 @@
   },
   {
     "fullyQualifiedName": "EIN",
-    "isReadOnly": false,
     "partialName": "EIN",
     "type": "org.apache.pdfbox.pdmodel.interactive.form.PDTextField",
     "isRequired": false,
@@ -321,7 +318,6 @@
   },
   {
     "fullyQualifiedName": "Line 8",
-    "isReadOnly": false,
     "partialName": "Line 8",
     "type": "org.apache.pdfbox.pdmodel.interactive.form.PDTextField",
     "isRequired": false,
@@ -336,7 +332,6 @@
   },
   {
     "fullyQualifiedName": "Line 9",
-    "isReadOnly": false,
     "partialName": "Line 9",
     "type": "org.apache.pdfbox.pdmodel.interactive.form.PDTextField",
     "isRequired": false,
@@ -351,7 +346,6 @@
   },
   {
     "fullyQualifiedName": "Line 10",
-    "isReadOnly": false,
     "partialName": "Line 10",
     "type": "org.apache.pdfbox.pdmodel.interactive.form.PDTextField",
     "isRequired": false,
@@ -366,7 +360,6 @@
   },
   {
     "fullyQualifiedName": "Line 11",
-    "isReadOnly": false,
     "partialName": "Line 11",
     "type": "org.apache.pdfbox.pdmodel.interactive.form.PDTextField",
     "isRequired": false,
@@ -381,7 +374,6 @@
   },
   {
     "fullyQualifiedName": "Line 12",
-    "isReadOnly": false,
     "partialName": "Line 12",
     "type": "org.apache.pdfbox.pdmodel.interactive.form.PDTextField",
     "isRequired": false,
@@ -396,7 +388,6 @@
   },
   {
     "fullyQualifiedName": "Line 13",
-    "isReadOnly": false,
     "partialName": "Line 13",
     "type": "org.apache.pdfbox.pdmodel.interactive.form.PDTextField",
     "isRequired": false,
@@ -411,7 +402,6 @@
   },
   {
     "fullyQualifiedName": "Line 14",
-    "isReadOnly": false,
     "partialName": "Line 14",
     "type": "org.apache.pdfbox.pdmodel.interactive.form.PDTextField",
     "isRequired": false,
@@ -426,7 +416,6 @@
   },
   {
     "fullyQualifiedName": "Line 15",
-    "isReadOnly": false,
     "partialName": "Line 15",
     "type": "org.apache.pdfbox.pdmodel.interactive.form.PDTextField",
     "isRequired": false,
@@ -441,7 +430,6 @@
   },
   {
     "fullyQualifiedName": "Line 16",
-    "isReadOnly": false,
     "partialName": "Line 16",
     "type": "org.apache.pdfbox.pdmodel.interactive.form.PDTextField",
     "isRequired": false,
@@ -456,7 +444,6 @@
   },
   {
     "fullyQualifiedName": "Line 18",
-    "isReadOnly": false,
     "partialName": "Line 18",
     "type": "org.apache.pdfbox.pdmodel.interactive.form.PDTextField",
     "isRequired": false,
@@ -471,7 +458,6 @@
   },
   {
     "fullyQualifiedName": "Line 19",
-    "isReadOnly": false,
     "partialName": "Line 19",
     "type": "org.apache.pdfbox.pdmodel.interactive.form.PDTextField",
     "isRequired": false,
@@ -486,7 +472,6 @@
   },
   {
     "fullyQualifiedName": "Line 20",
-    "isReadOnly": false,
     "partialName": "Line 20",
     "type": "org.apache.pdfbox.pdmodel.interactive.form.PDTextField",
     "isRequired": false,
@@ -501,7 +486,6 @@
   },
   {
     "fullyQualifiedName": "Line 21",
-    "isReadOnly": false,
     "partialName": "Line 21",
     "type": "org.apache.pdfbox.pdmodel.interactive.form.PDTextField",
     "isRequired": false,
@@ -516,7 +500,6 @@
   },
   {
     "fullyQualifiedName": "Line 22",
-    "isReadOnly": false,
     "partialName": "Line 22",
     "type": "org.apache.pdfbox.pdmodel.interactive.form.PDTextField",
     "isRequired": false,
@@ -531,7 +514,6 @@
   },
   {
     "fullyQualifiedName": "Line 23",
-    "isReadOnly": false,
     "partialName": "Line 23",
     "type": "org.apache.pdfbox.pdmodel.interactive.form.PDTextField",
     "isRequired": false,
@@ -546,7 +528,6 @@
   },
   {
     "fullyQualifiedName": "Line 24",
-    "isReadOnly": false,
     "partialName": "Line 24",
     "type": "org.apache.pdfbox.pdmodel.interactive.form.PDTextField",
     "isRequired": false,
@@ -561,7 +542,6 @@
   },
   {
     "fullyQualifiedName": "Line 25",
-    "isReadOnly": false,
     "partialName": "Line 25",
     "type": "org.apache.pdfbox.pdmodel.interactive.form.PDTextField",
     "isRequired": false,
@@ -576,7 +556,6 @@
   },
   {
     "fullyQualifiedName": "Line 26",
-    "isReadOnly": false,
     "partialName": "Line 26",
     "type": "org.apache.pdfbox.pdmodel.interactive.form.PDTextField",
     "isRequired": false,
@@ -591,7 +570,6 @@
   },
   {
     "fullyQualifiedName": "Line 27",
-    "isReadOnly": false,
     "partialName": "Line 27",
     "type": "org.apache.pdfbox.pdmodel.interactive.form.PDTextField",
     "isRequired": false,
@@ -606,7 +584,6 @@
   },
   {
     "fullyQualifiedName": "Line 28",
-    "isReadOnly": false,
     "partialName": "Line 28",
     "type": "org.apache.pdfbox.pdmodel.interactive.form.PDTextField",
     "isRequired": false,
@@ -621,7 +598,6 @@
   },
   {
     "fullyQualifiedName": "Line 29",
-    "isReadOnly": false,
     "partialName": "Line 29",
     "type": "org.apache.pdfbox.pdmodel.interactive.form.PDTextField",
     "isRequired": false,
@@ -636,7 +612,6 @@
   },
   {
     "fullyQualifiedName": "Line 30",
-    "isReadOnly": false,
     "partialName": "Line 30",
     "type": "org.apache.pdfbox.pdmodel.interactive.form.PDTextField",
     "isRequired": false,
@@ -651,7 +626,6 @@
   },
   {
     "fullyQualifiedName": "Line 31",
-    "isReadOnly": false,
     "partialName": "Line 31",
     "type": "org.apache.pdfbox.pdmodel.interactive.form.PDTextField",
     "isRequired": false,
@@ -666,7 +640,6 @@
   },
   {
     "fullyQualifiedName": "line 16a",
-    "isReadOnly": false,
     "partialName": "line 16a",
     "type": "org.apache.pdfbox.pdmodel.interactive.form.PDTextField",
     "isRequired": false,
@@ -681,18 +654,20 @@
   },
   {
     "fullyQualifiedName": "insurance benefits",
-    "isReadOnly": false,
     "partialName": "insurance benefits",
     "type": "org.apache.pdfbox.pdmodel.interactive.form.PDCheckBox",
     "isRequired": false,
     "page": 0,
     "cords": {},
     "onValue": "Yes",
+    "onValues": [
+      "No",
+      "Yes"
+    ],
     "value": ""
   },
   {
     "fullyQualifiedName": "empl qualify date",
-    "isReadOnly": false,
     "partialName": "empl qualify date",
     "type": "org.apache.pdfbox.pdmodel.interactive.form.PDTextField",
     "isRequired": false,
@@ -707,7 +682,6 @@
   },
   {
     "fullyQualifiedName": "service date",
-    "isReadOnly": false,
     "partialName": "service date",
     "type": "org.apache.pdfbox.pdmodel.interactive.form.PDTextField",
     "isRequired": false,
