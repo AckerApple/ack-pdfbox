@@ -208,6 +208,7 @@ public class FieldReader{
     return PDDocument.load(new File(path));
   }
 
+  /** final method used by App to get String of all fields. Also ensures PDF read is closed in error */
   public String getFields() throws IOException{
     try{
       return getJsonString();

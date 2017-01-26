@@ -12,6 +12,8 @@
     "fill": "java -jar ackpdfbox/target/ackpdfbox-1.0-SNAPSHOT-jar-with-dependencies.jar fill test/i-9.pdf test/i-9.pdf.json test/i-9-with-sig.pdf",
     "fill:flatten": "java -jar ackpdfbox/target/ackpdfbox-1.0-SNAPSHOT-jar-with-dependencies.jar fill test/i-9.pdf test/i-9.pdf.json test/i-9-with-sig.pdf -flatten true",
     "read": "java -jar ackpdfbox/target/ackpdfbox-1.0-SNAPSHOT-jar-with-dependencies.jar read test/i-9.pdf test/i-9.pdf.json",
+    "read:ahca": "java -jar ackpdfbox/target/ackpdfbox-1.0-SNAPSHOT-jar-with-dependencies.jar read test/AHCA_Level2_Forms.pdf test/AHCA_Level2_Forms.pdf.json",
+    "read:w4": "java -jar ackpdfbox/target/ackpdfbox-1.0-SNAPSHOT-jar-with-dependencies.jar read test/fw4.pdf test/fw4.pdf.json",
     "combo": "java -jar ackpdfbox/target/ackpdfbox-1.0-SNAPSHOT-jar-with-dependencies.jar combo \"read test/i-9.pdf test/i-9.pdf.json\" \"fill test/i-9.pdf test/i-9.pdf.json test/i-9-with-sig.pdf -flatten true\"",
     "read:it2104": "java -jar ackpdfbox/target/ackpdfbox-1.0-SNAPSHOT-jar-with-dependencies.jar read test/it2104_fill_in.pdf test/it2104_fill_in.pdf.json",
     "fill:it2104": "java -jar ackpdfbox/target/ackpdfbox-1.0-SNAPSHOT-jar-with-dependencies.jar fill test/it2104_fill_in.pdf test/it2104_fill_in.pdf.json test/it2104_filled_out.pdf",

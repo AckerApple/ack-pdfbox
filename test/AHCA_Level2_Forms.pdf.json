@@ -1,0 +1,443 @@
+[
+  {
+    "fullyQualifiedName": "EmployeeContractor Name",
+    "partialName": "EmployeeContractor Name",
+    "type": "org.apache.pdfbox.pdmodel.interactive.form.PDTextField",
+    "isRequired": false,
+    "page": 0,
+    "cords": {
+      "x": "205.8",
+      "y": "409.68",
+      "width": "338.28003",
+      "height": "20.52002"
+    },
+    "value": ""
+  },
+  {
+    "fullyQualifiedName": "Health Care Provider Employer Name",
+    "partialName": "Health Care Provider Employer Name",
+    "type": "org.apache.pdfbox.pdmodel.interactive.form.PDTextField",
+    "isRequired": false,
+    "page": 0,
+    "cords": {
+      "x": "254.16",
+      "y": "387.0",
+      "width": "289.92",
+      "height": "21.359985"
+    },
+    "value": ""
+  },
+  {
+    "fullyQualifiedName": "Address of Health Care Provider",
+    "partialName": "Address of Health Care Provider",
+    "type": "org.apache.pdfbox.pdmodel.interactive.form.PDTextField",
+    "isRequired": false,
+    "page": 0,
+    "cords": {
+      "x": "228.6",
+      "y": "364.56",
+      "width": "315.48",
+      "height": "21.119995"
+    },
+    "value": ""
+  },
+  {
+    "fullyQualifiedName": "Date of Prior Screening",
+    "partialName": "Date of Prior Screening",
+    "type": "org.apache.pdfbox.pdmodel.interactive.form.PDTextField",
+    "isRequired": false,
+    "page": 2,
+    "cords": {
+      "x": "207.12",
+      "y": "397.2",
+      "width": "297.12",
+      "height": "13.919983"
+    },
+    "value": ""
+  },
+  {
+    "fullyQualifiedName": "Agency for Health Care Administration",
+    "partialName": "Agency for Health Care Administration",
+    "type": "org.apache.pdfbox.pdmodel.interactive.form.PDCheckBox",
+    "isRequired": false,
+    "page": 2,
+    "cords": {
+      "x": "72.72",
+      "y": "365.4",
+      "width": "8.760002",
+      "height": "8.76001"
+    },
+    "onValue": "On",
+    "onValues": [
+      "On"
+    ],
+    "value": ""
+  },
+  {
+    "fullyQualifiedName": "Department of Health",
+    "partialName": "Department of Health",
+    "type": "org.apache.pdfbox.pdmodel.interactive.form.PDCheckBox",
+    "isRequired": false,
+    "page": 2,
+    "cords": {
+      "x": "72.72",
+      "y": "355.08",
+      "width": "8.760002",
+      "height": "8.76001"
+    },
+    "onValue": "On",
+    "onValues": [
+      "On"
+    ],
+    "value": ""
+  },
+  {
+    "fullyQualifiedName": "Agency for Persons with Disabilities",
+    "partialName": "Agency for Persons with Disabilities",
+    "type": "org.apache.pdfbox.pdmodel.interactive.form.PDCheckBox",
+    "isRequired": false,
+    "page": 2,
+    "cords": {
+      "x": "72.72",
+      "y": "343.32",
+      "width": "8.760002",
+      "height": "8.759979"
+    },
+    "onValue": "On",
+    "onValues": [
+      "On"
+    ],
+    "value": ""
+  },
+  {
+    "fullyQualifiedName": "Department of Children and Family Services",
+    "partialName": "Department of Children and Family Services",
+    "type": "org.apache.pdfbox.pdmodel.interactive.form.PDCheckBox",
+    "isRequired": false,
+    "page": 2,
+    "cords": {
+      "x": "72.72",
+      "y": "331.32",
+      "width": "8.760002",
+      "height": "8.759979"
+    },
+    "onValue": "On",
+    "onValues": [
+      "On"
+    ],
+    "value": ""
+  },
+  {
+    "fullyQualifiedName": "Department of Financial Services",
+    "partialName": "Department of Financial Services",
+    "type": "org.apache.pdfbox.pdmodel.interactive.form.PDCheckBox",
+    "isRequired": false,
+    "page": 2,
+    "cords": {
+      "x": "72.72",
+      "y": "319.56",
+      "width": "8.760002",
+      "height": "8.76001"
+    },
+    "onValue": "On",
+    "onValues": [
+      "On"
+    ],
+    "value": ""
+  },
+  {
+    "fullyQualifiedName": "requirements for qualifying for employment in regards to the background screening standards set forth in",
+    "partialName": "requirements for qualifying for employment in regards to the background screening standards set forth in",
+    "type": "org.apache.pdfbox.pdmodel.interactive.form.PDTextField",
+    "isRequired": false,
+    "page": 2,
+    "cords": {
+      "x": "191.88",
+      "y": "233.88",
+      "width": "168.23999",
+      "height": "13.919998"
+    },
+    "value": ""
+  },
+  {
+    "fullyQualifiedName": "Title",
+    "partialName": "Title",
+    "type": "org.apache.pdfbox.pdmodel.interactive.form.PDTextField",
+    "isRequired": false,
+    "page": 2,
+    "cords": {
+      "x": "324.0",
+      "y": "120.0",
+      "width": "108.119995",
+      "height": "13.919998"
+    },
+    "value": ""
+  },
+  {
+    "fullyQualifiedName": "Date",
+    "partialName": "Date",
+    "type": "org.apache.pdfbox.pdmodel.interactive.form.PDTextField",
+    "isRequired": false,
+    "page": 2,
+    "cords": {
+      "x": "468.0",
+      "y": "120.0",
+      "width": "72.119995",
+      "height": "13.919998"
+    },
+    "value": ""
+  },
+  {
+    "fullyQualifiedName": "Signature5",
+    "partialName": "Signature5",
+    "type": "org.apache.pdfbox.pdmodel.interactive.form.PDSignatureField",
+    "isRequired": true,
+    "page": 2,
+    "cords": {
+      "x": "73.3094",
+      "y": "120.288",
+      "width": "212.8366",
+      "height": "31.999992"
+    },
+    "value": ""
+  },
+  {
+    "fullyQualifiedName": "undefined",
+    "partialName": "undefined",
+    "type": "org.apache.pdfbox.pdmodel.interactive.form.PDTextField",
+    "isRequired": false,
+    "page": 3,
+    "cords": {},
+    "value": ""
+  },
+  {
+    "fullyQualifiedName": "EmployeeContractor Name Printed",
+    "partialName": "EmployeeContractor Name Printed",
+    "type": "org.apache.pdfbox.pdmodel.interactive.form.PDTextField",
+    "isRequired": false,
+    "page": 3,
+    "cords": {
+      "x": "71.64",
+      "y": "404.4",
+      "width": "214.92",
+      "height": "24.600006"
+    },
+    "value": ""
+  },
+  {
+    "fullyQualifiedName": "EmployeeContractor Signature",
+    "partialName": "EmployeeContractor Signature",
+    "type": "org.apache.pdfbox.pdmodel.interactive.form.PDSignatureField",
+    "isRequired": true,
+    "page": 3,
+    "cords": {
+      "x": "71.64",
+      "y": "353.76",
+      "width": "172.08",
+      "height": "24.599976"
+    },
+    "value": ""
+  },
+  {
+    "fullyQualifiedName": "Text1",
+    "partialName": "Text1",
+    "type": "org.apache.pdfbox.pdmodel.interactive.form.PDTextField",
+    "isRequired": false,
+    "page": 3,
+    "cords": {
+      "x": "104.728",
+      "y": "320.543",
+      "width": "150.0",
+      "height": "22.0"
+    },
+    "value": ""
+  },
+  {
+    "fullyQualifiedName": "Date Requested",
+    "partialName": "Date Requested",
+    "type": "org.apache.pdfbox.pdmodel.interactive.form.PDTextField",
+    "isRequired": false,
+    "page": 6,
+    "cords": {
+      "x": "68.04",
+      "y": "443.88",
+      "width": "156.84",
+      "height": "43.799988"
+    },
+    "value": ""
+  },
+  {
+    "fullyQualifiedName": "Check Requested Initials",
+    "partialName": "Check Requested Initials",
+    "type": "org.apache.pdfbox.pdmodel.interactive.form.PDTextField",
+    "isRequired": false,
+    "page": 6,
+    "cords": {
+      "x": "68.04",
+      "y": "384.84",
+      "width": "156.84",
+      "height": "43.80002"
+    },
+    "value": ""
+  },
+  {
+    "fullyQualifiedName": "Check",
+    "partialName": "Check",
+    "type": "org.apache.pdfbox.pdmodel.interactive.form.PDTextField",
+    "isRequired": false,
+    "page": 6,
+    "cords": {
+      "x": "227.64",
+      "y": "388.313",
+      "width": "150.00002",
+      "height": "40.327026"
+    },
+    "value": ""
+  },
+  {
+    "fullyQualifiedName": "Text29",
+    "partialName": "Text29",
+    "type": "org.apache.pdfbox.pdmodel.interactive.form.PDTextField",
+    "isRequired": false,
+    "page": 6,
+    "cords": {
+      "x": "391.856",
+      "y": "388.616",
+      "width": "150.00003",
+      "height": "40.328003"
+    },
+    "value": ""
+  },
+  {
+    "fullyQualifiedName": "Check Box8",
+    "partialName": "Check Box8",
+    "type": "org.apache.pdfbox.pdmodel.interactive.form.PDCheckBox",
+    "isRequired": false,
+    "page": 6,
+    "cords": {
+      "x": "96.0004",
+      "y": "332.398",
+      "width": "17.999603",
+      "height": "14.509003"
+    },
+    "onValue": "Yes",
+    "onValues": [
+      "Yes"
+    ],
+    "value": ""
+  },
+  {
+    "fullyQualifiedName": "Date Check ReceivedDate Results Received",
+    "partialName": "Date Check ReceivedDate Results Received",
+    "type": "org.apache.pdfbox.pdmodel.interactive.form.PDTextField",
+    "isRequired": false,
+    "page": 6,
+    "cords": {
+      "x": "227.472",
+      "y": "317.453",
+      "width": "156.84001",
+      "height": "42.326996"
+    },
+    "value": ""
+  },
+  {
+    "fullyQualifiedName": "Check Box9",
+    "partialName": "Check Box9",
+    "type": "org.apache.pdfbox.pdmodel.interactive.form.PDCheckBox",
+    "isRequired": false,
+    "page": 6,
+    "cords": {
+      "x": "96.0004",
+      "y": "313.198",
+      "width": "17.999603",
+      "height": "14.509003"
+    },
+    "onValue": "Yes",
+    "onValues": [
+      "Yes"
+    ],
+    "value": ""
+  },
+  {
+    "fullyQualifiedName": "Recruiters Signature",
+    "partialName": "Recruiters Signature",
+    "type": "org.apache.pdfbox.pdmodel.interactive.form.PDSignatureField",
+    "isRequired": true,
+    "page": 6,
+    "cords": {
+      "x": "224.76",
+      "y": "185.64",
+      "width": "215.16002",
+      "height": "28.800003"
+    },
+    "value": ""
+  },
+  {
+    "fullyQualifiedName": "Manager Signature",
+    "partialName": "Manager Signature",
+    "type": "org.apache.pdfbox.pdmodel.interactive.form.PDSignatureField",
+    "isRequired": true,
+    "page": 6,
+    "cords": {
+      "x": "211.56",
+      "y": "115.08",
+      "width": "215.16",
+      "height": "28.800003"
+    },
+    "value": ""
+  },
+  {
+    "fullyQualifiedName": "Social Security Number",
+    "partialName": "Social Security Number",
+    "type": "org.apache.pdfbox.pdmodel.interactive.form.PDTextField",
+    "isRequired": false,
+    "page": 6,
+    "cords": {},
+    "value": ""
+  },
+  {
+    "fullyQualifiedName": "DivisionDepartment",
+    "partialName": "DivisionDepartment",
+    "type": "org.apache.pdfbox.pdmodel.interactive.form.PDTextField",
+    "isRequired": false,
+    "page": 6,
+    "cords": {},
+    "value": ""
+  },
+  {
+    "fullyQualifiedName": "Employee Name",
+    "partialName": "Employee Name",
+    "type": "org.apache.pdfbox.pdmodel.interactive.form.PDTextField",
+    "isRequired": false,
+    "page": 6,
+    "cords": {},
+    "value": ""
+  },
+  {
+    "fullyQualifiedName": "Requested by",
+    "partialName": "Requested by",
+    "type": "org.apache.pdfbox.pdmodel.interactive.form.PDTextField",
+    "isRequired": false,
+    "page": 6,
+    "cords": {},
+    "value": ""
+  },
+  {
+    "fullyQualifiedName": "Date Taken",
+    "partialName": "Date Taken",
+    "type": "org.apache.pdfbox.pdmodel.interactive.form.PDTextField",
+    "isRequired": false,
+    "page": 6,
+    "cords": {},
+    "value": ""
+  },
+  {
+    "fullyQualifiedName": "Fingerprints Taken By",
+    "partialName": "Fingerprints Taken By",
+    "type": "org.apache.pdfbox.pdmodel.interactive.form.PDTextField",
+    "isRequired": false,
+    "page": 6,
+    "cords": {},
+    "value": ""
+  }
+]

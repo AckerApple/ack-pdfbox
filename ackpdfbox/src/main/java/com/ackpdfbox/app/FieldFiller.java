@@ -140,7 +140,7 @@ public class FieldFiller{
     java.util.Set<String> onValues = pDCheckBox.getOnValues();
     for(String checkValue : onValues){
       //System.out.println( checkValue+" - "+ );
-      if( checkValue.toLowerCase().equals(valueString) ){
+      if( checkValue.toLowerCase().equals( valueString.toLowerCase() ) ){
         pDCheckBox.setValue( checkValue );
         checkedByValue = true;
       }
