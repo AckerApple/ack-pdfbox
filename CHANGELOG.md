@@ -1,6 +1,10 @@
 # ack-pdfbox - Change Log
 All notable changes to this project will be documented here.
 
+## [1.2.14] - 2017-01-27
+### Fixed
+- Reading PDFs with no fill forms no longer errors, returns empty array
+
 ## [1.2.11] - 2017-01-17
 ### Fixed
 - better handling of Checkboxes that act as radios

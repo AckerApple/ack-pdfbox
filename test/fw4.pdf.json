@@ -197,7 +197,7 @@
     "onValues": [
       "1"
     ],
-    "value": ""
+    "value": "yes"
   },
   {
     "fullyQualifiedName": "topmostSubform[0].Page1[0].c1_01[1]",
@@ -215,7 +215,7 @@
     "onValues": [
       "2"
     ],
-    "value": ""
+    "value": "yes"
   },
   {
     "fullyQualifiedName": "topmostSubform[0].Page1[0].c1_01[2]",
@@ -233,7 +233,7 @@
     "onValues": [
       "3"
     ],
-    "value": ""
+    "value": "yes"
   },
   {
     "fullyQualifiedName": "topmostSubform[0].Page1[0].c1_02[0]",

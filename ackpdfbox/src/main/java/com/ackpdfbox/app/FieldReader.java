@@ -51,12 +51,14 @@ public class FieldReader{
   public JsonArray getGsonArray(){
     PDDocumentCatalog docCatalog = this.pdf.getDocumentCatalog();
     PDAcroForm acroForm = docCatalog.getAcroForm();
-    List<PDField> fields = acroForm.getFields();
-
-    JsonArray jArr = new JsonArray();
-    JsonArray rtn = fieldsOntoArray(fields, jArr, acroForm);
-
-    return rtn;
+    
+    if(acroForm!=null){
+      List<PDField> fields = acroForm.getFields();
+      JsonArray jArr = new JsonArray();
+      return fieldsOntoArray(fields, jArr, acroForm);
+    }
+    
+    return new JsonArray();
   }
 
   public String getJsonString(){
