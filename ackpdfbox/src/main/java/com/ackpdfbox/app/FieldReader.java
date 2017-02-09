@@ -168,7 +168,7 @@ public class FieldReader{
     jo.add("cords", getFieldCords(field));
     
     String value = field.getValueAsString();
-    if(field instanceof PDComboBox && value=="[]"){//is empty choice
+    if(field instanceof PDComboBox && value.matches("\\[\\s*\\]")){//is empty choice
       value = "";
     }else if(field instanceof PDCheckBox){//is empty choice
       PDCheckBox pDCheckBox = (PDCheckBox) acroForm.getField(fullname);

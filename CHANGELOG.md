@@ -1,6 +1,10 @@
 # ack-pdfbox - Change Log
 All notable changes to this project will be documented here.
 
+## [1.2.15] - 2017-01-27
+### Fixed
+- Reading PDFs with PDCombo boxes that had empty values, would produce a false value of "[]" or even "[          ]"
+
 ## [1.2.14] - 2017-01-27
 ### Fixed
 - Reading PDFs with no fill forms no longer errors, returns empty array
