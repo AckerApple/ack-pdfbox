@@ -1,6 +1,6 @@
 {
   "name": "ack-pdfbox",
-  "version": "1.2.15",
+  "version": "1.2.16",
   "description": "Java code for specific pdf manipulations",
   "main": "index.js",
   "directories": {
@@ -10,8 +10,10 @@
     "sign": "java -jar ackpdfbox/target/ackpdfbox-1.0-SNAPSHOT-jar-with-dependencies.jar sign test/pdfbox-test.p12 pdfbox-test-password test/unencrypted.pdf -tsa http://tsa.safecreative.org -out test/unencrypted22.pdf",
     "sign:i9": "java -jar ackpdfbox/target/ackpdfbox-1.0-SNAPSHOT-jar-with-dependencies.jar sign test/pdfbox-test.p12 pdfbox-test-password test/i-9.pdf -tsa http://tsa.safecreative.org -out test/i-922.pdf",
     "fill": "java -jar ackpdfbox/target/ackpdfbox-1.0-SNAPSHOT-jar-with-dependencies.jar fill test/i-9.pdf test/i-9.pdf.json test/i-9-with-sig.pdf",
+    "fill:i9-2017": "java -jar ackpdfbox/target/ackpdfbox-1.0-SNAPSHOT-jar-with-dependencies.jar fill test/i-9-2017.pdf test/i-9-2017.pdf.json test/i-9-2017-with-sig.pdf",
     "fill:flatten": "java -jar ackpdfbox/target/ackpdfbox-1.0-SNAPSHOT-jar-with-dependencies.jar fill test/i-9.pdf test/i-9.pdf.json test/i-9-with-sig.pdf -flatten true",
     "read": "java -jar ackpdfbox/target/ackpdfbox-1.0-SNAPSHOT-jar-with-dependencies.jar read test/i-9.pdf test/i-9.pdf.json",
+    "read:i9-2017": "java -jar ackpdfbox/target/ackpdfbox-1.0-SNAPSHOT-jar-with-dependencies.jar read test/i-9-2017.pdf test/i-9-2017.pdf.json",
     "read:ev": "java -jar ackpdfbox/target/ackpdfbox-1.0-SNAPSHOT-jar-with-dependencies.jar read test/employment-reference-verification.pdf test/employment-reference-verification.pdf.json",
     "read:ahca": "java -jar ackpdfbox/target/ackpdfbox-1.0-SNAPSHOT-jar-with-dependencies.jar read test/AHCA_Level2_Forms.pdf test/AHCA_Level2_Forms.pdf.json",
     "read:w4": "java -jar ackpdfbox/target/ackpdfbox-1.0-SNAPSHOT-jar-with-dependencies.jar read test/fw4.pdf test/fw4.pdf.json",

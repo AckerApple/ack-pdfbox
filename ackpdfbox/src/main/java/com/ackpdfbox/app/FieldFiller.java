@@ -73,7 +73,10 @@ public class FieldFiller{
         pdField.setReadOnly(false);
       }
 
-      if(pdField instanceof PDCheckBox){
+      if(pdField instanceof PDRadioButton){
+        PDRadioButton pDRadioButton = (PDRadioButton) acroForm.getField(fullname);
+        fillRadioButton(pDRadioButton, value);
+      }else if(pdField instanceof PDCheckBox){
         PDCheckBox pDCheckBox = (PDCheckBox) acroForm.getField(fullname);
         fillCheckbox(pDCheckBox, value);
       }else if(value!=null){
@@ -128,6 +131,35 @@ public class FieldFiller{
     pdf.save(this.outPath);
     pdf.close();
   }
+  
+  private void fillRadioButton(PDRadioButton pDCheckBox, JsonElement value) throws IOException{
+    if(value==null){
+      return;
+    }
+
+    String valueString = value.getAsString();
+    
+    Boolean checkedByValue = false;
+    java.util.Set<String> onValues = pDCheckBox.getOnValues();
+    for(String checkValue : onValues){
+      //System.out.println( checkValue+" - "+ );
+      if( checkValue.toLowerCase().equals( valueString.toLowerCase() ) ){
+        pDCheckBox.setValue( checkValue );
+        checkedByValue = true;
+      }
+    }
+
+    if(!checkedByValue){
+      Boolean checkOff = valueString.toLowerCase().equals("off");
+      Boolean checkOn = valueString.length()>0 && !checkOff;
+      
+      if(checkOff){
+        pDCheckBox.setValue("Off");
+      }else if(checkOn){
+        pDCheckBox.setValue(valueString);
+      }
+    }
+  }
 
   private void fillCheckbox(PDCheckBox pDCheckBox, JsonElement value) throws IOException{
     if(value==null){
@@ -139,7 +171,6 @@ public class FieldFiller{
     Boolean checkedByValue = false;
     java.util.Set<String> onValues = pDCheckBox.getOnValues();
     for(String checkValue : onValues){
-      //System.out.println( checkValue+" - "+ );
       if( checkValue.toLowerCase().equals( valueString.toLowerCase() ) ){
         pDCheckBox.setValue( checkValue );
         checkedByValue = true;

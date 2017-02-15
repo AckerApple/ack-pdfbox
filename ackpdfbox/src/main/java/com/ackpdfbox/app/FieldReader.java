@@ -16,6 +16,7 @@ import org.apache.pdfbox.pdmodel.interactive.form.PDAcroForm;
 import org.apache.pdfbox.pdmodel.interactive.form.PDField;
 import org.apache.pdfbox.pdmodel.interactive.form.PDComboBox;
 import org.apache.pdfbox.pdmodel.interactive.form.PDCheckBox;
+import org.apache.pdfbox.pdmodel.interactive.form.PDRadioButton;
 import org.apache.pdfbox.pdmodel.interactive.form.PDNonTerminalField;
 
 //choices
@@ -170,7 +171,25 @@ public class FieldReader{
     String value = field.getValueAsString();
     if(field instanceof PDComboBox && value.matches("\\[\\s*\\]")){//is empty choice
       value = "";
-    }else if(field instanceof PDCheckBox){//is empty choice
+    }else if(field instanceof PDRadioButton){
+      PDRadioButton pDCheckBox = (PDRadioButton) acroForm.getField(fullname);
+      //jo.addProperty("onValue", pDCheckBox.getOnValue());
+      JsonArray onValueArray = new JsonArray();
+      java.util.Set<String> onValues = pDCheckBox.getOnValues();
+      for(String checkValue : onValues){
+        onValueArray.add( checkValue );
+      }
+/*
+      JsonArray exportArray = new JsonArray();
+      List<String> exValues = pDCheckBox.getSelectedExportValues();
+      for(String checkValue : exValues){
+        exportArray.add( checkValue );
+      }
+      jo.add("selectedExportValues", exportArray);
+*/
+      jo.add("onValues", onValueArray);
+      jo.addProperty("isRadiosInUnison", pDCheckBox.isRadiosInUnison());
+    }else if(field instanceof PDCheckBox){
       PDCheckBox pDCheckBox = (PDCheckBox) acroForm.getField(fullname);
       jo.addProperty("onValue", pDCheckBox.getOnValue());
       JsonArray onValueArray = new JsonArray();
@@ -180,10 +199,9 @@ public class FieldReader{
         onValueArray.add( checkValue );
       }
 
-
       jo.add("onValues", onValueArray);
-      //jo.addProperty("exportValues", pDCheckBox.getExportValues().toString());
     }
+
     jo.addProperty("value", value);
 /*
     if(field instanceof PDChoice){

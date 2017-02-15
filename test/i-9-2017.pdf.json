@@ -1,0 +1,1210 @@
+[
+  {
+    "fullyQualifiedName": "form1[0].#subform[6].GivenName[0]",
+    "partialName": "GivenName[0]",
+    "type": "org.apache.pdfbox.pdmodel.interactive.form.PDTextField",
+    "isRequired": false,
+    "page": 0,
+    "cords": {
+      "x": "211.661",
+      "y": "585.511",
+      "width": "145.62999",
+      "height": "15.119995"
+    },
+    "value": ""
+  },
+  {
+    "fullyQualifiedName": "form1[0].#subform[6].FamilyName[0]",
+    "partialName": "FamilyName[0]",
+    "type": "org.apache.pdfbox.pdmodel.interactive.form.PDTextField",
+    "isRequired": false,
+    "page": 0,
+    "cords": {
+      "x": "39.1854",
+      "y": "585.511",
+      "width": "167.69261",
+      "height": "15.119995"
+    },
+    "value": ""
+  },
+  {
+    "fullyQualifiedName": "form1[0].#subform[6].MiddleInitial[0]",
+    "partialName": "MiddleInitial[0]",
+    "type": "org.apache.pdfbox.pdmodel.interactive.form.PDTextField",
+    "isRequired": false,
+    "page": 0,
+    "cords": {
+      "x": "361.869",
+      "y": "585.14",
+      "width": "44.515015",
+      "height": "15.119995"
+    },
+    "value": ""
+  },
+  {
+    "fullyQualifiedName": "form1[0].#subform[6].OtherNamesUsed[0]",
+    "partialName": "OtherNamesUsed[0]",
+    "type": "org.apache.pdfbox.pdmodel.interactive.form.PDTextField",
+    "isRequired": false,
+    "page": 0,
+    "cords": {
+      "x": "422.532",
+      "y": "585.511",
+      "width": "152.17996",
+      "height": "15.119995"
+    },
+    "value": ""
+  },
+  {
+    "fullyQualifiedName": "form1[0].#subform[6].StreetNumberName[0]",
+    "partialName": "StreetNumberName[0]",
+    "type": "org.apache.pdfbox.pdmodel.interactive.form.PDTextField",
+    "isRequired": false,
+    "page": 0,
+    "cords": {
+      "x": "37.151",
+      "y": "555.82",
+      "width": "200.339",
+      "height": "15.119995"
+    },
+    "value": ""
+  },
+  {
+    "fullyQualifiedName": "form1[0].#subform[6].AptNumber[0]",
+    "partialName": "AptNumber[0]",
+    "type": "org.apache.pdfbox.pdmodel.interactive.form.PDTextField",
+    "isRequired": false,
+    "page": 0,
+    "cords": {
+      "x": "243.213",
+      "y": "555.82",
+      "width": "53.94899",
+      "height": "15.119995"
+    },
+    "value": ""
+  },
+  {
+    "fullyQualifiedName": "form1[0].#subform[6].CityOrTown[0]",
+    "partialName": "CityOrTown[0]",
+    "type": "org.apache.pdfbox.pdmodel.interactive.form.PDTextField",
+    "isRequired": false,
+    "page": 0,
+    "cords": {
+      "x": "304.393",
+      "y": "555.82",
+      "width": "134.229",
+      "height": "15.119995"
+    },
+    "value": ""
+  },
+  {
+    "fullyQualifiedName": "form1[0].#subform[6].State[0]",
+    "partialName": "State[0]",
+    "type": "org.apache.pdfbox.pdmodel.interactive.form.PDComboBox",
+    "isRequired": false,
+    "page": 0,
+    "cords": {
+      "x": "455.457",
+      "y": "556.191",
+      "width": "34.0",
+      "height": "15.119995"
+    },
+    "value": ""
+  },
+  {
+    "fullyQualifiedName": "form1[0].#subform[6].ZipCode[0]",
+    "partialName": "ZipCode[0]",
+    "type": "org.apache.pdfbox.pdmodel.interactive.form.PDTextField",
+    "isRequired": false,
+    "page": 0,
+    "cords": {
+      "x": "492.492",
+      "y": "555.82",
+      "width": "78.69299",
+      "height": "15.119995"
+    },
+    "value": ""
+  },
+  {
+    "fullyQualifiedName": "form1[0].#subform[6].DateOfBirth[0]",
+    "partialName": "DateOfBirth[0]",
+    "type": "org.apache.pdfbox.pdmodel.interactive.form.PDTextField",
+    "isRequired": false,
+    "page": 0,
+    "cords": {
+      "x": "39.2471",
+      "y": "520.562",
+      "width": "98.908905",
+      "height": "15.119995"
+    },
+    "value": ""
+  },
+  {
+    "fullyQualifiedName": "form1[0].#subform[6].SocialSecurityNumber1[0]",
+    "partialName": "SocialSecurityNumber1[0]",
+    "type": "org.apache.pdfbox.pdmodel.interactive.form.PDTextField",
+    "isRequired": false,
+    "page": 0,
+    "cords": {
+      "x": "153.495",
+      "y": "520.25",
+      "width": "30.001999",
+      "height": "15.000977"
+    },
+    "value": ""
+  },
+  {
+    "fullyQualifiedName": "form1[0].#subform[6].SocialSecurityNumber2[0]",
+    "partialName": "SocialSecurityNumber2[0]",
+    "type": "org.apache.pdfbox.pdmodel.interactive.form.PDTextField",
+    "isRequired": false,
+    "page": 0,
+    "cords": {
+      "x": "195.186",
+      "y": "520.25",
+      "width": "19.362991",
+      "height": "15.000977"
+    },
+    "value": ""
+  },
+  {
+    "fullyQualifiedName": "form1[0].#subform[6].SocialSecurityNumber3[0]",
+    "partialName": "SocialSecurityNumber3[0]",
+    "type": "org.apache.pdfbox.pdmodel.interactive.form.PDTextField",
+    "isRequired": false,
+    "page": 0,
+    "cords": {
+      "x": "225.805",
+      "y": "520.621",
+      "width": "42.001007",
+      "height": "15.001038"
+    },
+    "value": ""
+  },
+  {
+    "fullyQualifiedName": "form1[0].#subform[6].email[0]",
+    "partialName": "email[0]",
+    "type": "org.apache.pdfbox.pdmodel.interactive.form.PDTextField",
+    "isRequired": false,
+    "page": 0,
+    "cords": {
+      "x": "269.139",
+      "y": "520.25",
+      "width": "170.22198",
+      "height": "15.000977"
+    },
+    "value": ""
+  },
+  {
+    "fullyQualifiedName": "form1[0].#subform[6].TelephoneNumber[0]",
+    "partialName": "TelephoneNumber[0]",
+    "type": "org.apache.pdfbox.pdmodel.interactive.form.PDTextField",
+    "isRequired": false,
+    "page": 0,
+    "cords": {
+      "x": "445.597",
+      "y": "520.25",
+      "width": "109.390015",
+      "height": "15.000977"
+    },
+    "value": ""
+  },
+  {
+    "fullyQualifiedName": "form1[0].#subform[6].Checkbox1a[0]",
+    "partialName": "Checkbox1a[0]",
+    "type": "org.apache.pdfbox.pdmodel.interactive.form.PDCheckBox",
+    "isRequired": false,
+    "page": 0,
+    "cords": {
+      "x": "39.5364",
+      "y": "455.946",
+      "width": "11.1133995",
+      "height": "10.0"
+    },
+    "onValue": "Y",
+    "onValues": [
+      "Y"
+    ],
+    "value": ""
+  },
+  {
+    "fullyQualifiedName": "form1[0].#subform[6].Checkbox1b[0]",
+    "partialName": "Checkbox1b[0]",
+    "type": "org.apache.pdfbox.pdmodel.interactive.form.PDCheckBox",
+    "isRequired": false,
+    "page": 0,
+    "cords": {
+      "x": "39.5364",
+      "y": "438.503",
+      "width": "11.1133995",
+      "height": "10.0"
+    },
+    "onValue": "Y",
+    "onValues": [
+      "Y"
+    ],
+    "value": ""
+  },
+  {
+    "fullyQualifiedName": "form1[0].#subform[6].Checkbox1c[0]",
+    "partialName": "Checkbox1c[0]",
+    "type": "org.apache.pdfbox.pdmodel.interactive.form.PDCheckBox",
+    "isRequired": false,
+    "page": 0,
+    "cords": {
+      "x": "39.5363",
+      "y": "422.915",
+      "width": "10.371201",
+      "height": "10.0"
+    },
+    "onValue": "Y",
+    "onValues": [
+      "Y"
+    ],
+    "value": ""
+  },
+  {
+    "fullyQualifiedName": "form1[0].#subform[6].Checkbox1d[0]",
+    "partialName": "Checkbox1d[0]",
+    "type": "org.apache.pdfbox.pdmodel.interactive.form.PDCheckBox",
+    "isRequired": false,
+    "page": 0,
+    "cords": {
+      "x": "39.1652",
+      "y": "405.843",
+      "width": "10.742302",
+      "height": "10.0"
+    },
+    "onValue": "Y",
+    "onValues": [
+      "Y"
+    ],
+    "value": ""
+  },
+  {
+    "fullyQualifiedName": "form1[0].#subform[6].AlienNumber[0]",
+    "partialName": "AlienNumber[0]",
+    "type": "org.apache.pdfbox.pdmodel.interactive.form.PDTextField",
+    "isRequired": false,
+    "page": 0,
+    "cords": {
+      "x": "338.549",
+      "y": "420.355",
+      "width": "129.00998",
+      "height": "15.119995"
+    },
+    "value": ""
+  },
+  {
+    "fullyQualifiedName": "form1[0].#subform[6].ExpirationDate[0]",
+    "partialName": "ExpirationDate[0]",
+    "type": "org.apache.pdfbox.pdmodel.interactive.form.PDTextField",
+    "isRequired": false,
+    "page": 0,
+    "cords": {
+      "x": "344.46",
+      "y": "401.73",
+      "width": "77.10501",
+      "height": "15.998993"
+    },
+    "value": ""
+  },
+  {
+    "fullyQualifiedName": "form1[0].#subform[6].AlienNumber[1]",
+    "partialName": "AlienNumber[1]",
+    "type": "org.apache.pdfbox.pdmodel.interactive.form.PDTextField",
+    "isRequired": false,
+    "page": 0,
+    "cords": {
+      "x": "230.548",
+      "y": "350.582",
+      "width": "129.01001",
+      "height": "15.119995"
+    },
+    "value": ""
+  },
+  {
+    "fullyQualifiedName": "form1[0].#subform[6].I94Number[0]",
+    "partialName": "I94Number[0]",
+    "type": "org.apache.pdfbox.pdmodel.interactive.form.PDTextField",
+    "isRequired": false,
+    "page": 0,
+    "cords": {
+      "x": "174.326",
+      "y": "324.231",
+      "width": "161.28899",
+      "height": "15.120026"
+    },
+    "value": ""
+  },
+  {
+    "fullyQualifiedName": "form1[0].#subform[6].PassportNumber[0]",
+    "partialName": "PassportNumber[0]",
+    "type": "org.apache.pdfbox.pdmodel.interactive.form.PDTextField",
+    "isRequired": false,
+    "page": 0,
+    "cords": {
+      "x": "150.15",
+      "y": "300.728",
+      "width": "254.177",
+      "height": "16.104004"
+    },
+    "value": ""
+  },
+  {
+    "fullyQualifiedName": "form1[0].#subform[6].CountryOfIssuance[0]",
+    "partialName": "CountryOfIssuance[0]",
+    "type": "org.apache.pdfbox.pdmodel.interactive.form.PDComboBox",
+    "isRequired": false,
+    "page": 0,
+    "cords": {
+      "x": "133.9",
+      "y": "282.664",
+      "width": "275.543",
+      "height": "15.119995"
+    },
+    "value": ""
+  },
+  {
+    "fullyQualifiedName": "form1[0].#subform[6].EmployeeSignature[0]",
+    "isReadOnly": true,
+    "partialName": "EmployeeSignature[0]",
+    "type": "org.apache.pdfbox.pdmodel.interactive.form.PDTextField",
+    "isRequired": false,
+    "page": 0,
+    "cords": {
+      "x": "123.665",
+      "y": "248.148",
+      "width": "246.281",
+      "height": "20.686996"
+    },
+    "value": ""
+  },
+  {
+    "fullyQualifiedName": "form1[0].#subform[6].DateofSignaturebyEmployee[0]",
+    "partialName": "DateofSignaturebyEmployee[0]",
+    "type": "org.apache.pdfbox.pdmodel.interactive.form.PDTextField",
+    "isRequired": false,
+    "page": 0,
+    "cords": {
+      "x": "477.219",
+      "y": "252.973",
+      "width": "84.002014",
+      "height": "15.11998"
+    },
+    "value": ""
+  },
+  {
+    "fullyQualifiedName": "form1[0].#subform[6].Signature[0]",
+    "isReadOnly": true,
+    "partialName": "Signature[0]",
+    "type": "org.apache.pdfbox.pdmodel.interactive.form.PDTextField",
+    "isRequired": false,
+    "page": 0,
+    "cords": {
+      "x": "37.3133",
+      "y": "152.395",
+      "width": "377.0467",
+      "height": "15.119995"
+    },
+    "value": ""
+  },
+  {
+    "fullyQualifiedName": "form1[0].#subform[6].DateofSignature[0]",
+    "partialName": "DateofSignature[0]",
+    "type": "org.apache.pdfbox.pdmodel.interactive.form.PDTextField",
+    "isRequired": false,
+    "page": 0,
+    "cords": {
+      "x": "418.208",
+      "y": "152.766",
+      "width": "84.00198",
+      "height": "15.119995"
+    },
+    "value": ""
+  },
+  {
+    "fullyQualifiedName": "form1[0].#subform[6].LastName[0]",
+    "partialName": "LastName[0]",
+    "type": "org.apache.pdfbox.pdmodel.interactive.form.PDTextField",
+    "isRequired": false,
+    "page": 0,
+    "cords": {
+      "x": "37.1122",
+      "y": "123.446",
+      "width": "283.17978",
+      "height": "15.119995"
+    },
+    "value": ""
+  },
+  {
+    "fullyQualifiedName": "form1[0].#subform[6].FirstName[0]",
+    "partialName": "FirstName[0]",
+    "type": "org.apache.pdfbox.pdmodel.interactive.form.PDTextField",
+    "isRequired": false,
+    "page": 0,
+    "cords": {
+      "x": "322.357",
+      "y": "123.817",
+      "width": "220.776",
+      "height": "15.119995"
+    },
+    "value": ""
+  },
+  {
+    "fullyQualifiedName": "form1[0].#subform[6].StreetNumberName[1]",
+    "partialName": "StreetNumberName[1]",
+    "type": "org.apache.pdfbox.pdmodel.interactive.form.PDTextField",
+    "isRequired": false,
+    "page": 0,
+    "cords": {
+      "x": "37.7069",
+      "y": "93.7552",
+      "width": "254.5261",
+      "height": "15.119797"
+    },
+    "value": ""
+  },
+  {
+    "fullyQualifiedName": "form1[0].#subform[6].CityOrTown[1]",
+    "partialName": "CityOrTown[1]",
+    "type": "org.apache.pdfbox.pdmodel.interactive.form.PDTextField",
+    "isRequired": false,
+    "page": 0,
+    "cords": {
+      "x": "294.829",
+      "y": "94.1263",
+      "width": "139.99698",
+      "height": "15.119705"
+    },
+    "value": ""
+  },
+  {
+    "fullyQualifiedName": "form1[0].#subform[6].State_Preparer[0]",
+    "partialName": "State_Preparer[0]",
+    "type": "org.apache.pdfbox.pdmodel.interactive.form.PDComboBox",
+    "isRequired": false,
+    "page": 0,
+    "cords": {
+      "x": "453.601",
+      "y": "94.4974",
+      "width": "34.0",
+      "height": "15.119598"
+    },
+    "value": ""
+  },
+  {
+    "fullyQualifiedName": "form1[0].#subform[6].ZipCode[1]",
+    "partialName": "ZipCode[1]",
+    "type": "org.apache.pdfbox.pdmodel.interactive.form.PDTextField",
+    "isRequired": false,
+    "page": 0,
+    "cords": {
+      "x": "493.234",
+      "y": "93.7552",
+      "width": "78.69299",
+      "height": "15.119797"
+    },
+    "value": ""
+  },
+  {
+    "fullyQualifiedName": "form1[0].#subform[7].ListA_DocumentTitle[0]",
+    "partialName": "ListA_DocumentTitle[0]",
+    "type": "org.apache.pdfbox.pdmodel.interactive.form.PDTextField",
+    "isRequired": false,
+    "page": 1,
+    "cords": {
+      "x": "39.5653",
+      "y": "596.107",
+      "width": "170.2727",
+      "height": "11.000977"
+    },
+    "value": ""
+  },
+  {
+    "fullyQualifiedName": "form1[0].#subform[7].ListB_IssuingAuthority[1]",
+    "partialName": "ListB_IssuingAuthority[1]",
+    "type": "org.apache.pdfbox.pdmodel.interactive.form.PDTextField",
+    "isRequired": false,
+    "page": 1,
+    "cords": {
+      "x": "38.9262",
+      "y": "573.467",
+      "width": "170.8088",
+      "height": "11.001038"
+    },
+    "value": ""
+  },
+  {
+    "fullyQualifiedName": "form1[0].#subform[7].ListADocumentNumber1[1]",
+    "partialName": "ListADocumentNumber1[1]",
+    "type": "org.apache.pdfbox.pdmodel.interactive.form.PDTextField",
+    "isRequired": false,
+    "page": 1,
+    "cords": {
+      "x": "39.2019",
+      "y": "549.714",
+      "width": "168.7731",
+      "height": "11.001038"
+    },
+    "value": ""
+  },
+  {
+    "fullyQualifiedName": "form1[0].#subform[7].ListAExpirationDate_1[0]",
+    "partialName": "ListAExpirationDate_1[0]",
+    "type": "org.apache.pdfbox.pdmodel.interactive.form.PDTextField",
+    "isRequired": false,
+    "page": 1,
+    "cords": {
+      "x": "40.3913",
+      "y": "528.061",
+      "width": "84.00169",
+      "height": "11.999023"
+    },
+    "value": ""
+  },
+  {
+    "fullyQualifiedName": "form1[0].#subform[7].ListA_DocumentTitle[1]",
+    "partialName": "ListA_DocumentTitle[1]",
+    "type": "org.apache.pdfbox.pdmodel.interactive.form.PDTextField",
+    "isRequired": false,
+    "page": 1,
+    "cords": {
+      "x": "37.3729",
+      "y": "503.694",
+      "width": "169.46211",
+      "height": "10.9999695"
+    },
+    "value": ""
+  },
+  {
+    "fullyQualifiedName": "form1[0].#subform[7].ListADocumentNumber1[0]",
+    "partialName": "ListADocumentNumber1[0]",
+    "type": "org.apache.pdfbox.pdmodel.interactive.form.PDTextField",
+    "isRequired": false,
+    "page": 1,
+    "cords": {
+      "x": "38.408",
+      "y": "481.796",
+      "width": "171.103",
+      "height": "11.001007"
+    },
+    "value": ""
+  },
+  {
+    "fullyQualifiedName": "form1[0].#subform[7].ListADocumentNumber1[4]",
+    "partialName": "ListADocumentNumber1[4]",
+    "type": "org.apache.pdfbox.pdmodel.interactive.form.PDTextField",
+    "isRequired": false,
+    "page": 1,
+    "cords": {
+      "x": "38.1344",
+      "y": "459.899",
+      "width": "170.90761",
+      "height": "11.001007"
+    },
+    "value": ""
+  },
+  {
+    "fullyQualifiedName": "form1[0].#subform[7].ListAExpirationDate_2[0]",
+    "partialName": "ListAExpirationDate_2[0]",
+    "type": "org.apache.pdfbox.pdmodel.interactive.form.PDTextField",
+    "isRequired": false,
+    "page": 1,
+    "cords": {
+      "x": "39.2778",
+      "y": "437.631",
+      "width": "84.0022",
+      "height": "11.000977"
+    },
+    "value": ""
+  },
+  {
+    "fullyQualifiedName": "form1[0].#subform[7].ListA_DocumentTitle[2]",
+    "partialName": "ListA_DocumentTitle[2]",
+    "type": "org.apache.pdfbox.pdmodel.interactive.form.PDTextField",
+    "isRequired": false,
+    "page": 1,
+    "cords": {
+      "x": "39.371",
+      "y": "412.765",
+      "width": "171.40399",
+      "height": "11.000977"
+    },
+    "value": ""
+  },
+  {
+    "fullyQualifiedName": "form1[0].#subform[7].ListADocumentNumber1[2]",
+    "partialName": "ListADocumentNumber1[2]",
+    "type": "org.apache.pdfbox.pdmodel.interactive.form.PDTextField",
+    "isRequired": false,
+    "page": 1,
+    "cords": {
+      "x": "39.2777",
+      "y": "390.497",
+      "width": "170.10631",
+      "height": "11.000977"
+    },
+    "value": ""
+  },
+  {
+    "fullyQualifiedName": "form1[0].#subform[7].ListADocumentNumber1[3]",
+    "partialName": "ListADocumentNumber1[3]",
+    "type": "org.apache.pdfbox.pdmodel.interactive.form.PDTextField",
+    "isRequired": false,
+    "page": 1,
+    "cords": {
+      "x": "38.4833",
+      "y": "367.858",
+      "width": "169.46771",
+      "height": "11.001007"
+    },
+    "value": ""
+  },
+  {
+    "fullyQualifiedName": "form1[0].#subform[7].ListAExpirationDate_3[0]",
+    "partialName": "ListAExpirationDate_3[0]",
+    "type": "org.apache.pdfbox.pdmodel.interactive.form.PDTextField",
+    "isRequired": false,
+    "page": 1,
+    "cords": {
+      "x": "39.649",
+      "y": "346.332",
+      "width": "84.002",
+      "height": "11.001007"
+    },
+    "value": ""
+  },
+  {
+    "fullyQualifiedName": "form1[0].#subform[7].ListB_DocumentTitle[0]",
+    "partialName": "ListB_DocumentTitle[0]",
+    "type": "org.apache.pdfbox.pdmodel.interactive.form.PDTextField",
+    "isRequired": false,
+    "page": 1,
+    "cords": {
+      "x": "224.642",
+      "y": "596.106",
+      "width": "171.999",
+      "height": "11.000977"
+    },
+    "value": ""
+  },
+  {
+    "fullyQualifiedName": "form1[0].#subform[7].ListB_IssuingAuthority[0]",
+    "partialName": "ListB_IssuingAuthority[0]",
+    "type": "org.apache.pdfbox.pdmodel.interactive.form.PDTextField",
+    "isRequired": false,
+    "page": 1,
+    "cords": {
+      "x": "225.384",
+      "y": "572.725",
+      "width": "171.999",
+      "height": "11.001038"
+    },
+    "value": ""
+  },
+  {
+    "fullyQualifiedName": "form1[0].#subform[7].ListBDocumentNumber1[0]",
+    "partialName": "ListBDocumentNumber1[0]",
+    "type": "org.apache.pdfbox.pdmodel.interactive.form.PDTextField",
+    "isRequired": false,
+    "page": 1,
+    "cords": {
+      "x": "223.528",
+      "y": "527.075",
+      "width": "171.99901",
+      "height": "12.11499"
+    },
+    "value": ""
+  },
+  {
+    "fullyQualifiedName": "form1[0].#subform[7].ListC_DocumentTitle[0]",
+    "partialName": "ListC_DocumentTitle[0]",
+    "type": "org.apache.pdfbox.pdmodel.interactive.form.PDTextField",
+    "isRequired": false,
+    "page": 1,
+    "cords": {
+      "x": "403.272",
+      "y": "595.735",
+      "width": "173.999",
+      "height": "11.001038"
+    },
+    "value": ""
+  },
+  {
+    "fullyQualifiedName": "form1[0].#subform[7].ListC_IssuingAuthority[0]",
+    "partialName": "ListC_IssuingAuthority[0]",
+    "type": "org.apache.pdfbox.pdmodel.interactive.form.PDTextField",
+    "isRequired": false,
+    "page": 1,
+    "cords": {
+      "x": "402.747",
+      "y": "572.354",
+      "width": "174.30597",
+      "height": "11.000977"
+    },
+    "value": ""
+  },
+  {
+    "fullyQualifiedName": "form1[0].#subform[7].ListC_DocumentNumber1[0]",
+    "partialName": "ListC_DocumentNumber1[0]",
+    "type": "org.apache.pdfbox.pdmodel.interactive.form.PDTextField",
+    "isRequired": false,
+    "page": 1,
+    "cords": {
+      "x": "402.529",
+      "y": "549.714",
+      "width": "173.99902",
+      "height": "11.001038"
+    },
+    "value": ""
+  },
+  {
+    "fullyQualifiedName": "form1[0].#subform[7].ListC_ExpirationDate[0]",
+    "partialName": "ListC_ExpirationDate[0]",
+    "type": "org.apache.pdfbox.pdmodel.interactive.form.PDTextField",
+    "isRequired": false,
+    "page": 1,
+    "cords": {
+      "x": "404.847",
+      "y": "527.318",
+      "width": "84.002014",
+      "height": "11.999023"
+    },
+    "value": ""
+  },
+  {
+    "fullyQualifiedName": "form1[0].#subform[7].FirstDayOfWork[0]",
+    "partialName": "FirstDayOfWork[0]",
+    "type": "org.apache.pdfbox.pdmodel.interactive.form.PDTextField",
+    "isRequired": false,
+    "page": 1,
+    "cords": {
+      "x": "280.516",
+      "y": "293.798",
+      "width": "84.002014",
+      "height": "15.119995"
+    },
+    "value": ""
+  },
+  {
+    "fullyQualifiedName": "form1[0].#subform[7].Signature[1]",
+    "isReadOnly": true,
+    "partialName": "Signature[1]",
+    "type": "org.apache.pdfbox.pdmodel.interactive.form.PDTextField",
+    "isRequired": false,
+    "page": 1,
+    "cords": {
+      "x": "37.9082",
+      "y": "262.069",
+      "width": "229.99979",
+      "height": "14.0"
+    },
+    "value": ""
+  },
+  {
+    "fullyQualifiedName": "form1[0].#subform[7].DateofSignature[1]",
+    "partialName": "DateofSignature[1]",
+    "type": "org.apache.pdfbox.pdmodel.interactive.form.PDTextField",
+    "isRequired": false,
+    "page": 1,
+    "cords": {
+      "x": "271.011",
+      "y": "261.509",
+      "width": "80.745026",
+      "height": "15.119995"
+    },
+    "value": ""
+  },
+  {
+    "fullyQualifiedName": "form1[0].#subform[7].Title[0]",
+    "partialName": "Title[0]",
+    "type": "org.apache.pdfbox.pdmodel.interactive.form.PDTextField",
+    "isRequired": false,
+    "page": 1,
+    "cords": {
+      "x": "379.589",
+      "y": "260.767",
+      "width": "197.61102",
+      "height": "15.119995"
+    },
+    "value": ""
+  },
+  {
+    "fullyQualifiedName": "form1[0].#subform[7].FamilyName[1]",
+    "partialName": "FamilyName[1]",
+    "type": "org.apache.pdfbox.pdmodel.interactive.form.PDTextField",
+    "isRequired": false,
+    "page": 1,
+    "cords": {
+      "x": "38.4756",
+      "y": "234.416",
+      "width": "173.9374",
+      "height": "15.119995"
+    },
+    "value": ""
+  },
+  {
+    "fullyQualifiedName": "form1[0].#subform[7].GivenName[1]",
+    "partialName": "GivenName[1]",
+    "type": "org.apache.pdfbox.pdmodel.interactive.form.PDTextField",
+    "isRequired": false,
+    "page": 1,
+    "cords": {
+      "x": "223.017",
+      "y": "234.416",
+      "width": "131.45401",
+      "height": "15.119995"
+    },
+    "value": ""
+  },
+  {
+    "fullyQualifiedName": "form1[0].#subform[7].EmployerBusinessOfOrgName[0]",
+    "partialName": "EmployerBusinessOfOrgName[0]",
+    "type": "org.apache.pdfbox.pdmodel.interactive.form.PDTextField",
+    "isRequired": false,
+    "page": 1,
+    "cords": {
+      "x": "404.701",
+      "y": "233.674",
+      "width": "171.30304",
+      "height": "15.12001"
+    },
+    "value": ""
+  },
+  {
+    "fullyQualifiedName": "form1[0].#subform[7].StreetNumberName[2]",
+    "partialName": "StreetNumberName[2]",
+    "type": "org.apache.pdfbox.pdmodel.interactive.form.PDTextField",
+    "isRequired": false,
+    "page": 1,
+    "cords": {
+      "x": "40.116",
+      "y": "206.581",
+      "width": "262.698",
+      "height": "15.12001"
+    },
+    "value": ""
+  },
+  {
+    "fullyQualifiedName": "form1[0].#subform[7].CityOrTown[2]",
+    "partialName": "CityOrTown[2]",
+    "type": "org.apache.pdfbox.pdmodel.interactive.form.PDTextField",
+    "isRequired": false,
+    "page": 1,
+    "cords": {
+      "x": "312.039",
+      "y": "206.581",
+      "width": "133.04001",
+      "height": "15.12001"
+    },
+    "value": ""
+  },
+  {
+    "fullyQualifiedName": "form1[0].#subform[7].State[1]",
+    "partialName": "State[1]",
+    "type": "org.apache.pdfbox.pdmodel.interactive.form.PDComboBox",
+    "isRequired": false,
+    "page": 1,
+    "cords": {
+      "x": "447.292",
+      "y": "207.323",
+      "width": "34.0",
+      "height": "15.119995"
+    },
+    "value": ""
+  },
+  {
+    "fullyQualifiedName": "form1[0].#subform[7].ZipCode[2]",
+    "partialName": "ZipCode[2]",
+    "type": "org.apache.pdfbox.pdmodel.interactive.form.PDTextField",
+    "isRequired": false,
+    "page": 1,
+    "cords": {
+      "x": "485.811",
+      "y": "206.952",
+      "width": "78.69302",
+      "height": "15.12001"
+    },
+    "value": ""
+  },
+  {
+    "fullyQualifiedName": "form1[0].#subform[7].FamilyName[2]",
+    "partialName": "FamilyName[2]",
+    "type": "org.apache.pdfbox.pdmodel.interactive.form.PDTextField",
+    "isRequired": false,
+    "page": 1,
+    "cords": {
+      "x": "38.6386",
+      "y": "149.873",
+      "width": "154.68341",
+      "height": "11.998993"
+    },
+    "value": ""
+  },
+  {
+    "fullyQualifiedName": "form1[0].#subform[7].GivenName[2]",
+    "partialName": "GivenName[2]",
+    "type": "org.apache.pdfbox.pdmodel.interactive.form.PDTextField",
+    "isRequired": false,
+    "page": 1,
+    "cords": {
+      "x": "195.955",
+      "y": "149.502",
+      "width": "120.999985",
+      "height": "11.999008"
+    },
+    "value": ""
+  },
+  {
+    "fullyQualifiedName": "form1[0].#subform[7].MiddleInitial[1]",
+    "partialName": "MiddleInitial[1]",
+    "type": "org.apache.pdfbox.pdmodel.interactive.form.PDTextField",
+    "isRequired": false,
+    "page": 1,
+    "cords": {
+      "x": "339.52",
+      "y": "149.873",
+      "width": "43.19101",
+      "height": "11.998993"
+    },
+    "value": ""
+  },
+  {
+    "fullyQualifiedName": "form1[0].#subform[7].DateofRehire[0]",
+    "partialName": "DateofRehire[0]",
+    "type": "org.apache.pdfbox.pdmodel.interactive.form.PDTextField",
+    "isRequired": false,
+    "page": 1,
+    "cords": {
+      "x": "400.939",
+      "y": "148.759",
+      "width": "157.88101",
+      "height": "13.854996"
+    },
+    "value": ""
+  },
+  {
+    "fullyQualifiedName": "form1[0].#subform[7].DocumentNumber[0]",
+    "partialName": "DocumentNumber[0]",
+    "type": "org.apache.pdfbox.pdmodel.interactive.form.PDTextField",
+    "isRequired": false,
+    "page": 1,
+    "cords": {
+      "x": "280.695",
+      "y": "97.6554",
+      "width": "154.16098",
+      "height": "13.999596"
+    },
+    "value": ""
+  },
+  {
+    "fullyQualifiedName": "form1[0].#subform[7].ExpirationDate[1]",
+    "partialName": "ExpirationDate[1]",
+    "type": "org.apache.pdfbox.pdmodel.interactive.form.PDTextField",
+    "isRequired": false,
+    "page": 1,
+    "cords": {
+      "x": "439.656",
+      "y": "96.9132",
+      "width": "114.591",
+      "height": "13.999802"
+    },
+    "value": ""
+  },
+  {
+    "fullyQualifiedName": "form1[0].#subform[7].DateofSignature[2]",
+    "partialName": "DateofSignature[2]",
+    "type": "org.apache.pdfbox.pdmodel.interactive.form.PDTextField",
+    "isRequired": false,
+    "page": 1,
+    "cords": {
+      "x": "239.671",
+      "y": "46.4387",
+      "width": "92.20799",
+      "height": "14.0"
+    },
+    "value": ""
+  },
+  {
+    "fullyQualifiedName": "form1[0].#subform[7].EmployerOrAuthRepName[0]",
+    "partialName": "EmployerOrAuthRepName[0]",
+    "type": "org.apache.pdfbox.pdmodel.interactive.form.PDTextField",
+    "isRequired": false,
+    "page": 1,
+    "cords": {
+      "x": "355.156",
+      "y": "47.1809",
+      "width": "219.75598",
+      "height": "14.0"
+    },
+    "value": ""
+  },
+  {
+    "fullyQualifiedName": "form1[0].#subform[7].DocumentTitle[0]",
+    "partialName": "DocumentTitle[0]",
+    "type": "org.apache.pdfbox.pdmodel.interactive.form.PDTextField",
+    "isRequired": false,
+    "page": 1,
+    "cords": {
+      "x": "38.5604",
+      "y": "97.2843",
+      "width": "210.8806",
+      "height": "13.999695"
+    },
+    "value": ""
+  },
+  {
+    "fullyQualifiedName": "form1[0].#subform[7].Section3_Signature[0]",
+    "isReadOnly": true,
+    "partialName": "Section3_Signature[0]",
+    "type": "org.apache.pdfbox.pdmodel.interactive.form.PDTextField",
+    "isRequired": false,
+    "page": 1,
+    "cords": {
+      "x": "39.0376",
+      "y": "47.9232",
+      "width": "197.3084",
+      "height": "14.0"
+    },
+    "value": ""
+  },
+  {
+    "fullyQualifiedName": "3D Barcode Do Not Write in This Space",
+    "partialName": "3D Barcode Do Not Write in This Space",
+    "type": "org.apache.pdfbox.pdmodel.interactive.form.PDTextField",
+    "isRequired": false,
+    "page": 0,
+    "cords": {
+      "x": "459.615",
+      "y": "318.441",
+      "width": "109.56",
+      "height": "52.679993"
+    },
+    "value": ""
+  },
+  {
+    "fullyQualifiedName": "3D Barcode Do Not Write in This Space_2",
+    "partialName": "3D Barcode Do Not Write in This Space_2",
+    "type": "org.apache.pdfbox.pdmodel.interactive.form.PDTextField",
+    "isRequired": false,
+    "page": 1,
+    "cords": {
+      "x": "452.875",
+      "y": "431.251",
+      "width": "109.67999",
+      "height": "55.679993"
+    },
+    "value": ""
+  },
+  {
+    "fullyQualifiedName": "Check Box2",
+    "partialName": "Check Box2",
+    "type": "org.apache.pdfbox.pdmodel.interactive.form.PDCheckBox",
+    "isRequired": false,
+    "page": 0,
+    "cords": {
+      "x": "37.8559",
+      "y": "216.924",
+      "width": "12.8041",
+      "height": "11.320007"
+    },
+    "onValue": "Yes",
+    "onValues": [
+      "Yes"
+    ],
+    "value": ""
+  },
+  {
+    "fullyQualifiedName": "Check Box3",
+    "partialName": "Check Box3",
+    "type": "org.apache.pdfbox.pdmodel.interactive.form.PDCheckBox",
+    "isRequired": false,
+    "page": 0,
+    "cords": {
+      "x": "196.331",
+      "y": "216.182",
+      "width": "12.433014",
+      "height": "11.690994"
+    },
+    "onValue": "Yes",
+    "onValues": [
+      "Yes"
+    ],
+    "value": ""
+  },
+  {
+    "fullyQualifiedName": "Group1",
+    "partialName": "Group1",
+    "type": "org.apache.pdfbox.pdmodel.interactive.form.PDRadioButton",
+    "isRequired": false,
+    "page": 0,
+    "cords": {},
+    "selectedExportValues": [
+      ""
+    ],
+    "onValues": [
+      "Choice3",
+      "Choice1",
+      "Choice2"
+    ],
+    "isRadiosInUnison": false,
+    "value": ""
+  },
+  {
+    "fullyQualifiedName": "Text1",
+    "partialName": "Text1",
+    "type": "org.apache.pdfbox.pdmodel.interactive.form.PDTextField",
+    "isRequired": false,
+    "page": 1,
+    "cords": {
+      "x": "164.525",
+      "y": "640.704",
+      "width": "145.12802",
+      "height": "11.5060425"
+    },
+    "value": ""
+  },
+  {
+    "fullyQualifiedName": "Text2",
+    "partialName": "Text2",
+    "type": "org.apache.pdfbox.pdmodel.interactive.form.PDTextField",
+    "isRequired": false,
+    "page": 1,
+    "cords": {
+      "x": "311.81",
+      "y": "640.704",
+      "width": "117.39499",
+      "height": "12.630005"
+    },
+    "value": ""
+  },
+  {
+    "fullyQualifiedName": "Text3",
+    "partialName": "Text3",
+    "type": "org.apache.pdfbox.pdmodel.interactive.form.PDTextField",
+    "isRequired": false,
+    "page": 1,
+    "cords": {
+      "x": "430.613",
+      "y": "641.078",
+      "width": "24.825989",
+      "height": "11.882019"
+    },
+    "value": ""
+  },
+  {
+    "fullyQualifiedName": "Text4",
+    "partialName": "Text4",
+    "type": "org.apache.pdfbox.pdmodel.interactive.form.PDTextField",
+    "isRequired": false,
+    "page": 1,
+    "cords": {
+      "x": "457.222",
+      "y": "641.078",
+      "width": "118.51904",
+      "height": "13.005981"
+    },
+    "value": ""
+  }
+]
