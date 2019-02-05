@@ -1,8 +1,12 @@
 # ack-pdfbox - Change Log
 All notable changes to this project will be documented here.
 
-## [1.2.16] - 2018-02-05
+## [1.2.17] - 2019-02-05
 - org.apache.pdfbox:pdfbox vulnerability found in ackpdfbox/pom.xml
+
+## [1.2.16] - 2017-02-15
+## Partial Fix
+- PDRadioButton are now supported. It seems though, that using setValue is selecting all radio inputs
 
 ## [1.2.15] - 2017-01-27
 ### Fixed
