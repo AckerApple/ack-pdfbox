@@ -1,6 +1,7 @@
 package com.ackpdfbox.app;
 
 import java.io.IOException;
+import java.util.ArrayList;
 
 import com.ackpdfbox.app.AddImage;
 import com.ackpdfbox.app.FieldReader;
@@ -83,6 +84,7 @@ public class App{
           try{
             com.ackpdfbox.app.Encrypt.main(arguments);
           }catch(Exception e){
+            System.err.println("Error: Cannot encrypt file: "+arguments[0]);
             e.printStackTrace();
           }
           break;
@@ -92,7 +94,7 @@ public class App{
           try{
             com.ackpdfbox.app.Decrypt.main(arguments);
           }catch(Exception e){
-            System.out.println(arguments[0]);
+            System.err.println("Error: Cannot decrypt file: "+arguments[0]);
             e.printStackTrace();
           }
           break;
@@ -101,7 +103,7 @@ public class App{
           try{
             com.ackpdfbox.app.CreateSignature.main(arguments);
           }catch(Exception e){
-            System.out.println(arguments[0]);
+            System.err.println("Error: Cannot sign file: "+arguments[0]);
             e.printStackTrace();
           }
           break;
@@ -109,10 +111,10 @@ public class App{
         case "pdftoimage":
           try{
             Gson gson = new GsonBuilder().create();
-
-            System.out.println( gson.toJson( com.ackpdfbox.app.PDFToImage.main(arguments) ) );
+            ArrayList<String> result = com.ackpdfbox.app.PDFToImage.main(arguments);
+            System.out.println( gson.toJson( result ) );
           }catch(Exception e){
-            System.out.println(arguments[0]);
+            System.err.println( "Error: Cannot create image of file: "+arguments[0] );
             e.printStackTrace();
           }
           break;

@@ -187,6 +187,7 @@ public final class PDFToImage
         {
             if(outputPrefix == null)
             {
+//                System.out.println("ack pdfFile : "+pdfFile+" - "+args[0]);
                 outputPrefix = pdfFile.substring( 0, pdfFile.lastIndexOf( '.' ));
             }
 

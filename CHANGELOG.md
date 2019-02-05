@@ -1,6 +1,9 @@
 # ack-pdfbox - Change Log
 All notable changes to this project will be documented here.
 
+## [1.2.16] - 2018-02-05
+- org.apache.pdfbox:pdfbox vulnerability found in ackpdfbox/pom.xml
+
 ## [1.2.15] - 2017-01-27
 ### Fixed
 - Reading PDFs with PDCombo boxes that had empty values, would produce a false value of "[]" or even "[          ]"
