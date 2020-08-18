@@ -6,6 +6,9 @@ import java.util.ArrayList;
 import com.ackpdfbox.app.AddImage;
 import com.ackpdfbox.app.FieldReader;
 import com.ackpdfbox.app.FieldFiller;
+import com.ackpdfbox.app.FieldCopier;
+import com.ackpdfbox.app.FieldRenamer;
+import com.ackpdfbox.app.FieldTranslator;
 
 import com.ackpdfbox.app.Decrypt;
 import com.ackpdfbox.app.Encrypt;
@@ -23,9 +26,9 @@ public class App{
   /**
    * This will read a PDF file and print out the form elements. <br>
    * see usage() for commandline
-   * 
+   *
    * @param args command line arguments
-   * 
+   *
    * @throws IOException If there is an error importing the FDF document.
    */
   public static void main(String[] args) throws IOException{
@@ -75,10 +78,37 @@ public class App{
           }
           break;
 
+        case "copy-fields":
+          if(args.length < 4){
+            copyFieldsUsage();
+          }else{
+            FieldCopier fieldCopier = new FieldCopier(args[1], args[2], args[3]);
+            fieldCopier.execute();
+          }
+          break;
+
+        case "rename-fields":
+          if(args.length < 5){
+            renameFieldsUsage();
+          }else{
+            FieldRenamer fieldRenamer = new FieldRenamer(args[1], args[2], args[3], args[4]);
+            fieldRenamer.execute();
+          }
+          break;
+
+        case "translate-fields":
+          if(args.length < 5){
+            translateFieldsUsage();
+          }else{
+            FieldTranslator fieldTranslator = new FieldTranslator(args[1], args[2], args[3], args[4]);
+            fieldTranslator.execute();
+          }
+          break;
+
         case "add-image":
           com.ackpdfbox.app.AddImage.main(args);
           break;
-        
+
         case "encrypt":
           addBouncyCastle();
           try{
@@ -88,7 +118,7 @@ public class App{
             e.printStackTrace();
           }
           break;
-        
+
         case "decrypt":
           addBouncyCastle();
           try{
@@ -98,7 +128,7 @@ public class App{
             e.printStackTrace();
           }
           break;
-        
+
         case "sign":
           try{
             com.ackpdfbox.app.CreateSignature.main(arguments);
@@ -138,11 +168,23 @@ public class App{
   }
 
   private static void usage(){
-    System.err.println("usage: <read|fill|pdftoimage|add-image|encrypt|decrypt|-version>");
+    System.err.println("usage: <read|fill|pdftoimage|add-image|copy-fields|rename-fields|translate-fields|encrypt|decrypt|-version>");
   }
 
   private static void fillUsage(){
     System.err.println("usage: fill <pdf-path> <json-path> <out-path>");
+  }
+
+  private static void copyFieldsUsage(){
+    System.err.println("usage: copy-fields <source-pdf-path> <target-pdf-path> <out-path>");
+  }
+
+  private static void renameFieldsUsage(){
+    System.err.println("usage: rename-fields <source-pdf-path> <out-path> <source-string> <target-string>");
+  }
+
+  private static void translateFieldsUsage(){
+    System.err.println("usage: translate-fields <source-pdf-path> <out-path> <translate-x> <translate-y>");
   }
 
   private static void addImageUsage(){
