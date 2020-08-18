@@ -306,4 +306,4 @@ java -jar dist/ackpdfbox-1.0-SNAPSHOT-jar-with-dependencies.jar translate-fields
 - This Java code is bundled using [Maven](https://maven.apache.org/)
 - [PDFBox](https://pdfbox.apache.org/)
 - Cryptography is provided by [BouncyCastle](http://www.bouncycastle.org/)
-  - [latest releases](https://www.bouncycastle.org/latest_releases.html)
+- [latest releases](https://www.bouncycastle.org/latest_releases.html)
