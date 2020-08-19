@@ -21,6 +21,9 @@ Java code for specific pdf manipulations
     - [Encrypt](#encrypt)
     - [Decrypt](#decrypt)
     - [add-image](#add-image)
+    - [copy-fields](#copy-fields)
+    - [rename-fields](#rename-fields)
+    - [translate-fields](#translate-fields)
     - [read](#read)
     - [fill](#fill)
 - [Resources](#resources)
@@ -260,10 +263,47 @@ Example Add Images as Pages
 java -jar dist/ackpdfbox-1.0-SNAPSHOT-jar-with-dependencies.jar add-image test/unencrypted.pdf test/testImage.png test/testImage2.JPG test/testImage.JPG -y -1 -width 100% -page -1 -out test/unencrypted2.pdf
 ```
 
+### copy-fields
+Copies the form fields from one pdf to another
+
+- **sourcePdfPath** - The PDF file to copy the fields from
+- **targetPdfPath** - The PDF file to copy the fields to (this file will not be overwritten unless outPath is specified as the same path)
+- **outPath** - The file path to save the resulting pdf to
+
+Example Copy Fields
+```
+java -jar dist/ackpdfbox-1.0-SNAPSHOT-jar-with-dependencies.jar copy-fields test/fw4-filled.pdf test/fw4.pdf test/fw4-with-copied-fields.pdf
+```
+
+### rename-fields
+Renames the all of the form fields in the source pdf based on a given substring
+
+- **sourcePdfPath** - The PDF file to rename the fields in
+- **outPath** - The file path to save the resulting pdf(with the renamed fields) to
+- **sourceString** - The substring to be replaced
+- **targetString** - The string to replace all instances of the sourceString with
+
+Example Rename Fields
+```
+java -jar dist/ackpdfbox-1.0-SNAPSHOT-jar-with-dependencies.jar rename-fields test/fw4.pdf test/fw4-with-renamed-fields.pdf "foo" "bar"
+```
+
+### translate-fields
+Translates the position of the form fields in the source pdf based on a given offset
+
+- **sourcePdfPath** - The PDF file to rename the fields in
+- **outPath** - The file path to save the resulting pdf(with the translated fields) to
+- **translateX** - A number representing how far to move the fields along the X axis (can be negative)
+- **translateY** - A number representing how far to move the fields along the Y axis (can be negative)
+
+Example Translate Fields
+```
+java -jar dist/ackpdfbox-1.0-SNAPSHOT-jar-with-dependencies.jar translate-fields test/fw4.pdf test/fw4-with-translated-fields.pdf 50 100
+```
 
 ## Resources
 
 - This Java code is bundled using [Maven](https://maven.apache.org/)
 - [PDFBox](https://pdfbox.apache.org/)
 - Cryptography is provided by [BouncyCastle](http://www.bouncycastle.org/)
-  - [latest releases](https://www.bouncycastle.org/latest_releases.html)
+- [latest releases](https://www.bouncycastle.org/latest_releases.html)
