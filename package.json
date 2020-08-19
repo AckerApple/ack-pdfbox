@@ -7,6 +7,8 @@
     "test": "test"
   },
   "scripts": {
+    "build": "npm run build:jar && npm run build:copy",
+    "build:copy": "cp ./ackpdfbox/target/ackpdfbox-1.0-SNAPSHOT-jar-with-dependencies.jar ./dist/ackpdfbox-1.0-SNAPSHOT-jar-with-dependencies.jar",
     "build:jar": "mvn clean compile assembly:single -f ./ackpdfbox/pom.xml",
     "sign": "java -jar ackpdfbox/target/ackpdfbox-1.0-SNAPSHOT-jar-with-dependencies.jar sign test/pdfbox-test.p12 pdfbox-test-password test/unencrypted.pdf -tsa http://tsa.safecreative.org -out test/unencrypted22.pdf",
     "sign:i9": "java -jar ackpdfbox/target/ackpdfbox-1.0-SNAPSHOT-jar-with-dependencies.jar sign test/pdfbox-test.p12 pdfbox-test-password test/i-9.pdf -tsa http://tsa.safecreative.org -out test/i-922.pdf",
